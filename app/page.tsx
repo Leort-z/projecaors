@@ -1,14 +1,21 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import PortfolioItem from './components/PortfolioItem'
 
 export default function Home() {
+  const portfolioItems = [
+    { name: "Residencial Gabi", imagePath: "residencial-gabi.png" },
+    { name: "Residencial Larissa", imagePath: "residencial-larissa.png" },
+    { name: "Residencial LB", imagePath: "residencial-lb.png" },
+    { name: "Residencial Zatti", imagePath: "residencial-zatti.png" },
+    { name: "Sublime Residence", imagePath: "sublime-residence.png" }]
   return (
     <>
       <header
         style={{ background: 'linear-gradient(360deg, rgba(15, 30, 21, 0) 0%, #0F1E15 0%)' }}
-        className='w-full flex justify-between items-center pl-40 pr-32 text-x min-h-24'
+        className='w-full flex justify-between items-center pl-40 pr-32 text-x min-h-24 fixed'
       >
-        <Image src='/white-logo.png' width={140} height={87.5} alt='Logo da empresa Projeção' />
+        <Image src='/white-logo.png' width={120} height={75} alt='Logo da empresa Projeção' />
         <nav className='flex justify-between gap-16 text-[#F8F1E7] '>
           <Link href='/portfolio'>PORTFÓLIO</Link>
           <Link href='/services'>SERVIÇOS</Link>
@@ -17,6 +24,13 @@ export default function Home() {
         </nav>
       </header>
       <main className="bg-[url('/main-image.png')] min-h-screen bg-cover bg-no-repeat	"></main>
+      <section className='h-[calc(100%-132px)] text-center text-4xl px-36 py-12'>
+        <h1 className="font-bold">PORTFÓLIO</h1>
+        <div className='flex flex-row h-full justify-between mt-12'>
+          {portfolioItems.map(({ name, imagePath }) => <PortfolioItem name={name} imagePath={imagePath} />)}
+        </div>
+
+      </section>
     </>
   )
 }
