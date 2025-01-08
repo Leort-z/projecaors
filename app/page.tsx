@@ -24,13 +24,31 @@ export default function Home() {
         </nav>
       </header>
       <main className="bg-[url('/main-image.png')] min-h-screen bg-cover bg-no-repeat	"></main>
-      <section className='h-[calc(100%-132px)] text-center text-4xl px-36 py-12'>
+      <section className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12'>
         <h1 className="font-bold">PORTFÓLIO</h1>
-        <div className='flex flex-row h-full justify-between mt-12'>
+        <div className='flex flex-row h-3/4 justify-between mt-12'>
           {portfolioItems.map(({ name, imagePath }) => <PortfolioItem name={name} imagePath={imagePath} />)}
+          
         </div>
+        <button style={{ background: '#F8F1E7' }}
+                    className="h-12 w-1/4 text-lg border-2 border-yellow-600 ">VER MAIS
 
+        </button>
       </section>
+      
+      <section style={{ background: '#1B3124' }}
+      className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12'>
+        <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
+        <div className='flex flex-row h-3/4 justify-between mt-12'>
+          {portfolioItems.map(({ name, imagePath }) => <PortfolioItem name={name} imagePath={imagePath} />)}
+          
+        </div>
+        <button style={{ background: '#F8F1E7' }}
+                    className="h-12 w-1/4 text-lg border-2 border-yellow-600 ">VER MAIS
+
+        </button>
+      </section>
+      
     </>
   )
 }
