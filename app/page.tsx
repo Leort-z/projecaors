@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import PortfolioItem from './components/PortfolioItem'
+import ServicoItem from './components/ServicoItem'
 
 export default function Home() {
   const portfolioItems = [
@@ -9,6 +10,15 @@ export default function Home() {
     { name: "Residencial LB", imagePath: "residencial-lb.png" },
     { name: "Residencial Zatti", imagePath: "residencial-zatti.png" },
     { name: "Sublime Residence", imagePath: "sublime-residence.png" }]
+
+    const servicoItems = [
+      { name: "Construção", imagePath: "construcao.png" },
+      { name: "Execução de obras", imagePath: "execucao-obra.png" },
+      { name: "Laudo técnico", imagePath: "laudo-tecnico.png" },
+      { name: "Construção", imagePath: "construcao.png" },
+      { name: "Execução de obras", imagePath: "execucao-obra.png" },
+      { name: "Laudo técnico", imagePath: "laudo-tecnico.png" }]
+
   return (
     <>
       <header
@@ -39,14 +49,10 @@ export default function Home() {
       <section style={{ background: '#1B3124' }}
       className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12'>
         <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
-        <div className='flex flex-row h-3/4 justify-between mt-12'>
-          {portfolioItems.map(({ name, imagePath }) => <PortfolioItem name={name} imagePath={imagePath} />)}
+        <div className='flex h-3/4 justify-between mt-12 '>
+          {servicoItems.map(({ name, imagePath }) => <ServicoItem  name={name} imagePath={imagePath} />)}
           
         </div>
-        <button style={{ background: '#F8F1E7' }}
-                    className="h-12 w-1/4 text-lg border-2 border-yellow-600 ">VER MAIS
-
-        </button>
       </section>
       
     </>
