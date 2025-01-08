@@ -49,7 +49,7 @@ export default function Home() {
       <section style={{ background: '#1B3124' }}
       className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12'>
         <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
-        <div className='flex h-3/4 justify-between mt-12 '>
+        <div className='flex flex-wrap h-3/4 mt-12 justify-center gap-3 border border-red-700'>
           {servicoItems.map(({ name, imagePath }) => <ServicoItem  name={name} imagePath={imagePath} />)}
           
         </div>
