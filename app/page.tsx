@@ -40,7 +40,7 @@ export default function Home() {
           {portfolioItems.map(({ name, imagePath }) => <PortfolioItem name={name} imagePath={imagePath} />)}
 
         </div>
-        <button 
+        <button
           className="h-12 w-1/4 text-lg border-2 border-yellow-600 hover:bg-amber-50">VER MAIS
 
         </button>
@@ -57,7 +57,65 @@ export default function Home() {
 
         </button>
       </section>
+      <section className='h-full px-12 py-12 flex flex-col gap-12 items-center'>
+        <h1 className="text-7xl pb-14">Família Projeção</h1>
+        <div className='flex h-3/5 justify-between gap-3 w-5/6 '>
+          <div className="h-full w-2/5 flex flex-col ">
+            <div className="h-full w-full bg-cover min-h-80 min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/escritorio.png" }} />
+            <h3 className="text-lg">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
+          </div>
+          <p className='text-3xl'>[Início] <br /><br />
+            A Projeção é uma empresa familiar com raízes profundas em <br />
+            Capão da Canoa e uma história que remonta ao final dos <br />
+            anos 80. Fundada por Mário Sérgio Jacobs Barrionuevo, <br />
+            engenheiro civil formado pela PUCRS em 1983, a Projeção <br />
+            iniciou sua trajetória focada em projetos de arquitetura e <br />
+            engenharia. Nossa primeira sede estava localizada na <br />
+            Avenida Paraguassu, mas, em meados dos anos 90, <br />
+            mudamos para o emblemático Chalé Verde, na esquina da <br />
+            Rua Pindorama, onde funcionava a imobiliária do pai de <br />
+            Mário, Alcides Castilhos Barrionuevo, e que por muitos anos <br />
+            foi o lar da família Barrionuevo.</p>
+        </div>
 
+        <div className='flex h-3/5 justify-between gap-3 w-5/6 '>
+          <p className='text-2xl'>
+          Mário Sérgio não foi apenas um engenheiro talentoso, mas também <br />
+          um professor dedicado e uma figura respeitada em Capão da Canoa. <br />
+          Ele contribuiu ativamente para o desenvolvimento da cidade, <br />
+          ocupando um papel importante no setor de obras da prefeitura. Era <br />
+          comum que profissionais e cidadãos o procurassem para esclarecer <br />
+          dúvidas sobre processos da prefeitura, o funcionamento da <br />
+          administração e até para resolver problemas complexos. Sempre <br />
+          disposto a compartilhar seu conhecimento, Mário adorava explicar e <br />
+          orientar, e por isso era amplamente admirado por sua generosidade e <br />
+          dedicação à comunidade.</p>
+          <div className="h-full w-2/5 flex flex-col ">
+            <div className="h-full w-full bg-cover min-h-80 min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/mario.png" }} />
+            <h3 className="text-2xl">(Legenda: Mário Sérgio fundador da empresa Projeção)</h3>
+          </div>
+        </div>
+
+        <div className='flex h-3/5 justify-between w-5/6 '>
+          <div className="h-full w-2/5 flex flex-col ">
+            <div className="h-full w-full bg-cover min-h-80 min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/formatura.png" }} />
+            <h3 className="text-lg">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
+          </div>
+          <p className='text-xl'>
+          Ao longo das décadas, a Projeção evoluiu e se modernizou, mantendo a essência de qualidade <br />
+          e comprometimento com o cliente. Em 2016, Ramiro Nunes Barrionuevo, filho de Mário Sérgio e <br /> 
+          também engenheiro civil formado pela PUCRS, passou a integrar a liderança da empresa, <br /> 
+          trazendo uma visão renovada e implementando novos processos que levaram a Projeção a  <br /> 
+          expandir seus horizontes. No ano de 2020, a construtora da Projeção foi oficialmente <br /> 
+          inaugurada sob a direção de Ramiro. Nesse mesmo período, a filha de Mário Sérgio, Isadora, <br /> 
+          ainda estudante de engenharia civil, começou seu estágio na empresa, contribuindo para a <br /> 
+          continuidade da história da família no setor. Em 2021, com o falecimento de Mário Sérgio, <br /> 
+          seus filhos assumiram plenamente a liderança da Projeção, mantendo vivo o legado de dedicação <br /> 
+          e excelência deixado por ele. Após a formatura de Isadora em 2022, a empresa continuou sua  <br /> 
+          trajetória de expansão, atuando não apenas em Capão da Canoa e Xangri-lá, mas também em <br />  
+          outras cidades como Porto Alegre e Gramado.</p>
+        </div>
+      </section>
     </>
   )
 }
