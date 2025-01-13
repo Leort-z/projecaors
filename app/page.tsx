@@ -59,12 +59,12 @@ export default function Home() {
       </section>
       <section className='h-[calc(200%-96px)] px-12 py-12 flex flex-col gap-12 items-center'>
         <h1 className="text-7xl">Família Projeção</h1>
-        <div className='flex h-3/5 justify-between gap-3 w-5/6 items-center'>
+        <div className='flex flex-wrap h-3/5 justify-between gap-3 w-5/6 items-center border border-red-600'>
           <div className="h-full w-2/4 flex flex-col ">
             <div className="h-full w-full bg-cover bg-center rounded" style={{ backgroundImage: "url('/historia-images/escritorio.png" }} />
-            <h3 className="text-lg">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
+            <h3 className="text-lg text-center">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
           </div>
-          <p className='text-xl'>[Início] <br /><br />
+          <p className='text-xl border border-red-600'>[Início] <br /><br />
             A Projeção é uma empresa familiar com raízes profundas em <br />
             Capão da Canoa e uma história que remonta ao final dos <br />
             anos 80. Fundada por Mário Sérgio Jacobs Barrionuevo, <br />
@@ -78,7 +78,7 @@ export default function Home() {
             foi o lar da família Barrionuevo.</p>
         </div>
 
-        <div className='flex h-3/5 justify-between gap-3 w-5/6 items-center'>
+        <div className='flex flex-wrap-reverse h-3/5 justify-between gap-3 w-5/6 items-center border border-red-600'>
           <p className='text-xl'>
           Mário Sérgio não foi apenas um engenheiro talentoso, mas também <br />
           um professor dedicado e uma figura respeitada em Capão da Canoa. <br />
@@ -91,15 +91,15 @@ export default function Home() {
           orientar, e por isso era amplamente admirado por sua generosidade e <br />
           dedicação à comunidade.</p>
           <div className="h-full w-2/5 flex flex-col ">
-            <div className="h-full w-full bg-cover min-h-80 min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/mario.png" }} />
-            <h3 className="text-2xl">(Legenda: Mário Sérgio fundador da empresa Projeção)</h3>
+            <div className="h-full w-full bg-cover min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/mario.png" }} />
+            <h3 className="text-lg text-center">(Legenda: Mário Sérgio fundador da empresa Projeção)</h3>
           </div>
         </div>
 
-        <div className='flex h-3/5 justify-between w-5/6 items-center'>
+        <div className='flex flex-wrap h-3/5 justify-between w-5/6 items-center'>
           <div className="h-full w-2/5 flex flex-col ">
             <div className="h-full w-full bg-cover min-h-80 min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/formatura.png" }} />
-            <h3 className="text-lg">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
+            <h3 className="text-lg text-center">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
           </div>
           <p className='text-xl'>
           Ao longo das décadas, a Projeção evoluiu e se modernizou, mantendo a essência de  <br />
