@@ -27,7 +27,7 @@ export default function Home() {
         style={{ background: 'linear-gradient(360deg, rgba(15, 30, 21, 0) 0%, #0F1E15 0%)' }}
         className='w-full flex justify-between items-center pl-40 pr-32 text-x min-h-24 fixed'
       >
-        <Image src='/white-logo.png' width={120} height={75} alt='Logo da empresa Projeção' />
+        <Image src='/white-logo.png' width={120} height={75} alt='Logo da empresa Projeção'/>
         <nav className='flex justify-between gap-16 text-[#F8F1E7] '>
           <Link href='#portfolio'>PORTFÓLIO</Link>
           <Link href='#servicos'>SERVIÇOS</Link>
@@ -59,62 +59,62 @@ export default function Home() {
 
         </button>
       </section>
-      <section className='h-[calc(200%-96px)] px-12 py-12 flex flex-col gap-12 items-center' id='quemsomos'>
+      <section className='h-[calc(300%-96px)] px-12 py-12 flex flex-col gap-12 items-center' id='quemsomos'>
         <h1 className="text-7xl">Família Projeção</h1>
-        <div className='flex flex-wrap h-3/5 justify-between gap-3 w-5/6 items-center '>
+        <div className='flex flex-wrap h-1/6 justify-between gap-3 w-5/6 items-center '>
           <div className="h-full w-2/4 flex flex-col ">
             <div className="h-full w-full bg-cover bg-center rounded" style={{ backgroundImage: "url('/historia-images/escritorio.png" }} />
             <h3 className="text-lg text-center">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
           </div>
-          <p className='text-xl '>[Início] <br /><br />
-            A Projeção é uma empresa familiar com raízes profundas em <br />
-            Capão da Canoa e uma história que remonta ao final dos <br />
-            anos 80. Fundada por Mário Sérgio Jacobs Barrionuevo, <br />
-            engenheiro civil formado pela PUCRS em 1983, a Projeção <br />
-            iniciou sua trajetória focada em projetos de arquitetura e <br />
-            engenharia. Nossa primeira sede estava localizada na <br />
-            Avenida Paraguassu, mas, em meados dos anos 90, <br />
-            mudamos para o emblemático Chalé Verde, na esquina da <br />
-            Rua Pindorama, onde funcionava a imobiliária do pai de <br />
-            Mário, Alcides Castilhos Barrionuevo, e que por muitos anos <br />
+          <p className='text-xl'>[Início] <br /><br />
+            A Projeção é uma empresa familiar com raízes profundas em 
+            Capão da Canoa e uma história que remonta ao final dos 
+            anos 80. Fundada por Mário Sérgio Jacobs Barrionuevo, 
+            engenheiro civil formado pela PUCRS em 1983, a Projeção 
+            iniciou sua trajetória focada em projetos de arquitetura e 
+            engenharia. Nossa primeira sede estava localizada na 
+            Avenida Paraguassu, mas, em meados dos anos 90, 
+            mudamos para o emblemático Chalé Verde, na esquina da 
+            Rua Pindorama, onde funcionava a imobiliária do pai de 
+            Mário, Alcides Castilhos Barrionuevo, e que por muitos anos 
             foi o lar da família Barrionuevo.</p>
         </div>
 
-        <div className='flex flex-wrap-reverse h-3/5 justify-between gap-3 w-5/6 items-center '>
+        <div className='flex flex-wrap-reverse h-1/6 justify-between gap-3 w-5/6 items-center '>
           <p className='text-xl'>
-            Mário Sérgio não foi apenas um engenheiro talentoso, mas também <br />
-            um professor dedicado e uma figura respeitada em Capão da Canoa. <br />
-            Ele contribuiu ativamente para o desenvolvimento da cidade, <br />
-            ocupando um papel importante no setor de obras da prefeitura. Era <br />
-            comum que profissionais e cidadãos o procurassem para esclarecer <br />
-            dúvidas sobre processos da prefeitura, o funcionamento da <br />
-            administração e até para resolver problemas complexos. Sempre <br />
-            disposto a compartilhar seu conhecimento, Mário adorava explicar e <br />
-            orientar, e por isso era amplamente admirado por sua generosidade e <br />
+            Mário Sérgio não foi apenas um engenheiro talentoso, mas também 
+            um professor dedicado e uma figura respeitada em Capão da Canoa. 
+            Ele contribuiu ativamente para o desenvolvimento da cidade, 
+            ocupando um papel importante no setor de obras da prefeitura. Era 
+            comum que profissionais e cidadãos o procurassem para esclarecer 
+            dúvidas sobre processos da prefeitura, o funcionamento da 
+            administração e até para resolver problemas complexos. Sempre 
+            disposto a compartilhar seu conhecimento, Mário adorava explicar e 
+            orientar, e por isso era amplamente admirado por sua generosidade e 
             dedicação à comunidade.</p>
-          <div className="h-full w-2/5 flex flex-col ">
+          <div className="h-2/3 w-2/5 flex flex-col ">
             <div className="h-full w-full bg-cover min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/mario.png" }} />
             <h3 className="text-lg text-center">(Legenda: Mário Sérgio fundador da empresa Projeção)</h3>
           </div>
         </div>
 
-        <div className='flex flex-wrap h-3/5 justify-between w-5/6 items-center'>
-          <div className="h-full w-2/5 flex flex-col ">
+        <div className='flex flex-wrap h-1/6 justify-between w-5/6 items-center'>
+          <div className="h-full w-4/5 flex flex-col">
             <div className="h-full w-full bg-cover min-h-80 min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/formatura.png" }} />
             <h3 className="text-lg text-center">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
           </div>
           <p className='text-xl'>
-            Ao longo das décadas, a Projeção evoluiu e se modernizou, mantendo a essência de  <br />
-            qualidade e comprometimento com o cliente. Em 2016, Ramiro Nunes Barrionuevo, filho de <br />
-            Mário Sérgio e também engenheiro civil formado pela PUCRS, passou a integrar a <br />
-            liderança da empresa, trazendo uma visão renovada e implementando novos processos que <br />
-            levaram a Projeção a  expandir seus horizontes. No ano de 2020, a construtora da Projeção <br />
-            foi oficialmente inaugurada sob a direção de Ramiro. Nesse mesmo período, a filha de <br />
-            Mário Sérgio, Isadora, ainda estudante de engenharia civil, começou seu estágio na<br />
-            empresa, contribuindo para a  continuidade da história da família no setor. Em 2021, com<br />
-            o falecimento de Mário Sérgio, seus filhos assumiram plenamente a liderança da Projeção,<br />
-            mantendo vivo o legado de dedicação e excelência deixado por ele. Após a formatura de <br />
-            Isadora em 2022, a empresa continuou sua trajetória de expansão, atuando não apenas <br />
+            Ao longo das décadas, a Projeção evoluiu e se modernizou, mantendo a essência de  
+            qualidade e comprometimento com o cliente. Em 2016, Ramiro Nunes Barrionuevo, filho de 
+            Mário Sérgio e também engenheiro civil formado pela PUCRS, passou a integrar a 
+            liderança da empresa, trazendo uma visão renovada e implementando novos processos que 
+            levaram a Projeção a  expandir seus horizontes. No ano de 2020, a construtora da Projeção 
+            foi oficialmente inaugurada sob a direção de Ramiro. Nesse mesmo período, a filha de 
+            Mário Sérgio, Isadora, ainda estudante de engenharia civil, começou seu estágio na
+            empresa, contribuindo para a  continuidade da história da família no setor. Em 2021, com
+            o falecimento de Mário Sérgio, seus filhos assumiram plenamente a liderança da Projeção,
+            mantendo vivo o legado de dedicação e excelência deixado por ele. Após a formatura de 
+            Isadora em 2022, a empresa continuou sua trajetória de expansão, atuando não apenas 
             em Capão da Canoa e Xangri-lá, mas também em outras cidades como Porto Alegre e Gramado.</p>
         </div>
       </section>
