@@ -27,7 +27,7 @@ export default function Home() {
         style={{ background: 'linear-gradient(360deg, rgba(15, 30, 21, 0) 0%, #0F1E15 0%)' }}
         className='w-full flex justify-between items-center pl-40 pr-32 text-x min-h-24 fixed'
       >
-        <Image src='/white-logo.png' width={120} height={75} alt='Logo da empresa Projeção' className='cursor-pointer'/>
+        <Image src='/white-logo.png' width={120} height={75} alt='Logo da empresa Projeção' className='cursor-pointer' />
         <nav className='flex justify-between gap-16 text-[#F8F1E7] '>
           <Link className='hover:underline underline-offset-2' href='#portfolio' >PORTFÓLIO</Link>
           <Link className='hover:underline underline-offset-2' href='#servicos'>SERVIÇOS</Link>
@@ -121,52 +121,53 @@ export default function Home() {
 
       <section style={{ background: '#1B3124' }}
         className='h-[calc(140%-96px)] text-center text-4xl px-36 py-16 flex flex-col items-center gap-16' id='contato'>
-        <div className='flex w-full '>
-          <div className='flex flex-col w-2/4 items-start gap-4'>
-            <h1 className="font-bold text-[#F8F1E7]">Contato:</h1>
-            <div className='flex items-center'>
-              <Image src='/icones/pin.png' width={80} height={50} alt='Ícone localização' />
-              <h2 className='text-[#F8F1E7]'>Rua peri, 1400 Capão da Canoa/RS</h2>
+        <div className='flex w-full h-2/4 items-center justify-center'>
+          <div className='flex flex-col h-3/4 w-2/5 items-start gap-4 '>
+            <h1 className="font-bold text-[#F8F1E7] text-6xl">Contato:</h1>
+            <div className='flex items-center text-2xl'>
+              <Image src='/icones/pin.png' width={50} height={31.25} alt='Ícone localização' />
+              <h3 className='text-[#F8F1E7]'>Rua peri, 1400 - Capão da Canoa/RS</h3>
             </div>
-            <div className='flex items-center'>
-              <Image src='/icones/telefone.png' width={80} height={50} alt='Ícone telefone' />
-              <h2 className='text-[#F8F1E7]'>51 99090-9090</h2>
+            <div className='flex items-center text-2xl gap-4'>
+              <Image src='/icones/telefone.png' width={40} height={25} alt='Ícone telefone' />
+              <h3 className='text-[#F8F1E7]'>51 99090-9090</h3>
             </div>
-            <div className='flex items-center'>
-              <Image src='/icones/whatsapp.png' width={80} height={50} alt='Ícone whatsapp' />
-              <h2 className='text-[#F8F1E7]'>51 99090-9090</h2>
+            <div className='flex items-center text-2xl gap-4'>
+              <Image src='/icones/whatsapp.png' width={40} height={25} alt='Ícone whatsapp' />
+              <h3 className='text-[#F8F1E7]'>51 99090-9090</h3>
             </div>
-            <div className='flex items-center'>
-              <Image src='/icones/carta.png' width={80} height={50} alt='Ícone email' />
-              <h2 className='text-[#F8F1E7]'>contato@projecao.com.br</h2>
+            <div className='flex items-center text-2xl gap-4'>
+              <Image src='/icones/carta.png' width={40} height={25} alt='Ícone email' />
+              <h3 className='text-[#F8F1E7]'>contato@projecao.com.br</h3>
             </div>
           </div>
-          <div className='flex flex-col w-2/4 items-start gap-8 pt-10'>
-            <input className="border-4 border-yellow-600 w-5/6 text-3xl outline-none" placeholder='Nome*'></input>
-            <input className="border-4 border-yellow-600 w-5/6 text-3xl outline-none" placeholder='E-mail*'></input>
-            <input className="border-4 border-yellow-600 w-5/6 text-3xl outline-none" placeholder='Telefone*'></input>
-            <textarea className="border-4 border-yellow-600 w-5/6 h-1/4 text-3xl outline-none" placeholder='Mensagem*'></textarea>
+          <div className='flex flex-col w-2/5 h-3/4 items-start gap-3 '>
+            <input className="border-4 border-yellow-600 w-full text-2xl outline-none" placeholder='Nome*'></input>
+            <input className="border-4 border-yellow-600 w-full text-2xl outline-none" placeholder='E-mail*'></input>
+            <input className="border-4 border-yellow-600 w-full text-2xl outline-none" placeholder='Telefone*'></input>
+            <textarea className="border-4 border-yellow-600 w-full h-full text-2xl outline-none" placeholder='Mensagem*'></textarea>
+            <button className="w-1/3 text-lg border-2 border-yellow-600 text-[#A77A37] hover:bg-green-950 ">ENVIAR MENSAGEM</button>
           </div>
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d865.9319525534949!2d-50.017724510561!3d-29.756589710652964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95228320911045f1%3A0x3bba1caa90c3b287!2sProje%C3%A7%C3%A3o%20Arquitetura%20e%20Engenharia!5e0!3m2!1spt-BR!2sbr!4v1737053648924!5m2!1spt-BR!2sbr"
-          className="w-3/4 h-3/4" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
+          className="w-3/4 h-3/4" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
 
       </section>
-      <section 
-        className='h-[calc(40%)] text-center text-2xl px-36 py-12 justify-center' id='servicos'>
-          <div className='flex justify-between'>
-        <div className='flex flex-col justify-between gap-8  items-start'>
-          <Link href='#portfolio'>PORTFÓLIO</Link>
-          <Link href='#servicos'>SERVIÇOS</Link>
-          <Link href='#quemsomos'>QUEM SOMOS</Link>
-          <Link href='#contato'>CONTATO</Link>
-        </div> 
-        <div className='flex flex-col gap-4'>
-        <Image className='cursor-pointer' src='/icones/facebook.png' width={80} height={50} alt='Ícone localização' />
-        <Image className='cursor-pointer' src='/icones/instagram.png' width={80} height={50} alt='Ícone localização' />
-        <Image className='cursor-pointer' src='/icones/whatsapp-cinza.png' width={80} height={50} alt='Ícone localização' />
+      <section
+        className='h-[calc(30%)] text-center text-2xl px-24 justify-center' id='servicos'>
+        <div className='flex h-full justify-between'>
+          <div className='flex flex-col gap-6 items-start justify-center'>
+            <Link href='#portfolio'>PORTFÓLIO</Link>
+            <Link href='#servicos'>SERVIÇOS</Link>
+            <Link href='#quemsomos'>QUEM SOMOS</Link>
+            <Link href='#contato'>CONTATO</Link>
+          </div>
+          <div className='flex flex-col gap-4 justify-center'>
+            <Image className='cursor-pointer' src='/icones/facebook.png' width={60} height={47.5} alt='Ícone localização' />
+            <Image className='cursor-pointer' src='/icones/instagram.png' width={60} height={47.5} alt='Ícone localização' />
+            <Image className='cursor-pointer' src='/icones/whatsapp-cinza.png' width={60} height={47.5} alt='Ícone localização' />
+          </div>
         </div>
-        </div>      
       </section>
     </>
   )
