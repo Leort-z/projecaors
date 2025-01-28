@@ -1,0 +1,405 @@
+[
+   {
+      "id": "1",
+      "name": "Residencial Dona Cecília",
+      "detail": "",
+      "year": "2006",
+      "city": "Capão da Canoa/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION"
+      ],
+      "company": "Super Construtora",
+      "mainPhoto": "1.png",
+      "extraPhotos": [
+         ""
+      ],
+      "videos": []
+   },
+   {
+      "id": "2",
+      "name": "Residencial Larissa",
+      "detail": "",
+      "year": "2007",
+      "city": "Capão da Canoa/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION"
+      ],
+      "company": "ICS Construção",
+      "mainPhoto": "2.png",
+      "extraPhotos": [
+         ""
+      ],
+      "videos": []
+   },
+   {
+      "id": "3",
+      "name": "Residencial Gabi",
+      "detail": "",
+      "year": "2010",
+      "city": "Capão da Canoa/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION"
+      ],
+      "company": "ICS Construção",
+      "mainPhoto": "3.png",
+      "extraPhotos": [
+         ""
+      ],
+      "videos": []
+   },
+   {
+      "id": "4",
+      "name": "Residencial Zatti",
+      "detail": "",
+      "year": "2013",
+      "city": "Capão da Canoa/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION"
+      ],
+      "company": "ICS Construção",
+      "mainPhoto": "4.png",
+      "extraPhotos": [
+         ""
+      ],
+      "videos": []
+   },
+   {
+      "id": "5",
+      "name": "Residencial LB",
+      "detail": "",
+      "year": "2015",
+      "city": "Capão da Canoa/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION"
+      ],
+      "company": "ICS Construção",
+      "mainPhoto": "5.png",
+      "extraPhotos": [
+         ""
+      ],
+      "videos": []
+   },
+   {
+      "id": "6",
+      "name": "Dubai QD01LT01",
+      "detail": "",
+      "year": "2017",
+      "city": "Condomínio Resort Dubai - Capão da Canoa/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION"
+      ],
+      "company": "",
+      "mainPhoto": "6.png",
+      "extraPhotos": [],
+      "videos": []
+   },
+   {
+      "id": "7",
+      "name": "Residencial Ale",
+      "detail": "",
+      "year": "2017",
+      "city": "Capão da Canoa/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION"
+      ],
+      "company": "ICS Construção",
+      "mainPhoto": "7.png",
+      "extraPhotos": [""
+      ],
+      "videos": []
+   },
+   {
+      "id": "8",
+      "name": "Sublime Residence",
+      "detail": "",
+      "year": "2017",
+      "city": "Capão da Canoa/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION"
+      ],
+      "company": "Super Construtora",
+      "mainPhoto": "8.png",
+      "extraPhotos": [],
+      "videos": []
+   },
+   {
+      "id": "9",
+      "name": "Enseada C79",
+      "detail": "",
+      "year": "2018",
+      "city": "Condomínio Enseada Lagos - Xangri-lá/RS",
+      "actions": [
+         "EXECUTION"
+      ],
+      "company": "Arquiteta Lia Dietschi",
+      "mainPhoto": "9.png",
+      "extraPhotos": [],
+      "videos": []
+   },
+   {
+      "id": "10",
+      "name": "Blue QD05LT45",
+      "detail": "Residência com design moderno, destacando-se pelo ripado, excelente iluminação natural, concreto aparente e uma planta baixa diferenciada.",
+      "year": "2020",
+      "city": "Condomínio Blue - Xangri-lá/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION",
+         "CONSTRUCTION"
+      ],
+      "company": "",
+      "mainPhoto": "10/10.png",
+      "extraPhotos": [
+         "10/10a.png",
+         "10/10b.png",
+         "10/10c.png",
+         "10/10d.png",
+         "10/10e.png",
+         "10/10f.png",
+         "10/10g.png",
+         "10/10h.png",
+         "10/10i.png"
+      ],
+      "videos": [
+         "https://www.youtube.com/watch?v=LPGxAUShxHA"
+      ]
+   },
+   {
+      "id": "11",
+      "name": "Capão Village",
+      "detail": "",
+      "year": "2021",
+      "city": "Capão Novo Village - Capão da Canoa/RS",
+      "actions": [
+         "PROJECT"
+      ],
+      "company": "",
+      "mainPhoto": "11/11.png",
+      "extraPhotos": [
+         "11/11a.png",
+         "11/11b.png",
+         "11/11c.png",
+         "11/11d.png"
+      ],
+      "videos": []
+   },
+   {
+      "id": "12",
+      "name": "Condado G26",
+      "detail": "",
+      "year": "2021",
+      "city": "Condomínio Condado de Capão - Capão da Canoa/RS",
+      "actions": [
+         "EXECUTION"
+      ],
+      "company": "",
+      "mainPhoto": "",
+      "extraPhotos": [""],
+      "videos": [
+         ""
+      ]
+   },
+   {
+      "id": "13",
+      "name": "Blue QD15LT07",
+      "detail": "Uma residência com design moderno e atemporal, a casa se destaca pelo ripado, concreto aparente e um jardim vertical que traz muita elegância e um toque especial.",
+      "year": "2021",
+      "city": "Condomínio Blue - Xangri-lá/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION",
+         "CONSTRUCTION"
+      ],
+      "company": "",
+      "mainPhoto": "13/13.png",
+      "extraPhotos": [
+         "13/13a.png",
+         "13/13b.png",
+         "13/13c.png",
+         "13/13d.png",
+         "13/13e.png",
+         "13/13f.png"
+      ],
+      "videos": [
+         "https://www.youtube.com/watch?v=poodSQuA9bw",
+         "https://www.youtube.com/watch?v=c_bv5ekdmcw&t=1s"
+      ]
+   },
+   {
+      "id": "14",
+      "name": "Essence Gramado",
+      "detail": "",
+      "year": "2021",
+      "city": "Gramado/RS",
+      "actions": [
+         "EXECUTION"
+      ],
+      "company": "Super Construtora",
+      "mainPhoto": "14.png",
+      "extraPhotos": [""],
+      "videos": []
+   },
+   {
+      "id": "15",
+      "name": "Posto Maravilha - Torres",
+      "detail": "",
+      "year": "2021",
+      "city": "Torres/RS",
+      "actions": [
+         "EXECUTION"
+      ],
+      "company": "",
+      "mainPhoto": "",
+      "extraPhotos": [],
+      "videos": []
+   },
+   {
+      "id": "16",
+      "name": "Tischler Residence",
+      "detail": "",
+      "year": "2022",
+      "city": "Capão da Canoa/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION"
+      ],
+      "company": "ICS Construção",
+      "mainPhoto": "16.png",
+      "extraPhotos": [],
+      "videos": []
+   },
+   {
+      "id": "17",
+      "name": "Palazzo di Milano",
+      "detail": "",
+      "year": "2022",
+      "city": "Porto Alegre/RS",
+      "actions": [
+         "EXECUTION"
+      ],
+      "company": "Mare Construtora e Incorporadora",
+      "mainPhoto": "17.png",
+      "extraPhotos": [],
+      "videos": []
+   },
+   {
+      "id": "18",
+      "name": "Rio Carreiro 86",
+      "detail": "",
+      "year": "2022",
+      "city": "Xangri-lá/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION"
+      ],
+      "company": "Metta Construtora",
+      "mainPhoto": "18/18.png",
+      "extraPhotos": [
+         "18/18a.png"         
+      ],
+      "videos": [
+         "",
+         ""
+      ]
+   },
+   {
+      "id": "19",
+      "name": "Sunset QD12LT09",
+      "detail": "Uma residência com projeto moderno, fachada com porcelanato nobre, leds e pintura em cimento queimado.",
+      "year": "2023",
+      "city": "Condomínio Sunset - Xangri-lá/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION",
+         "CONSTRUCTION"
+      ],
+      "company": "",
+      "mainPhoto": "19/19.png",
+      "extraPhotos": [
+         "19/19a.png",
+         "19/19b.png",
+         "19/19c.png",
+         "19/19d.png",
+         "19/19e.png",
+         "19/19f.png"
+      ],
+      "videos": [
+         "https://www.youtube.com/watch?v=dXAfbgwM-lE",
+         "https://www.youtube.com/watch?v=3hkodyCHNLs"
+      ]
+   },
+   {
+      "id": "20",
+      "name": "Ceci 3337",
+      "detail": "",
+      "year": "2023",
+      "city": "Capão da Canoa/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION"
+      ],
+      "company": "Metta Construtora",
+      "mainPhoto": "20/20.png",
+      "extraPhotos": [
+         "20/20a.png",
+         "20/20b.png"
+      ],
+      "videos": []
+   },
+   {
+      "id": "21",
+      "name": "Reforma Área Gourmet Atlântida",
+      "detail": "",
+      "year": "2024",
+      "city": "Xangri-lá/RS",
+      "actions": [
+         "PROJECT"
+      ],
+      "company": "",
+      "mainPhoto": "21/21.png",
+      "extraPhotos": [
+         "21/21a.png",
+         "21/21b.png",
+         "21/21c.png"
+      ],
+      "videos": [
+         "https://www.youtube.com/watch?v=nWiYGadzyOQ"
+      ]
+   },
+   {
+      "id": "22",
+      "name": "Liberty Residence",
+      "detail": "",
+      "year": "2024",
+      "city": "Gramado/RS",
+      "actions": [
+         "EXECUTION"
+      ],
+      "company": "Super Construtora",
+      "mainPhoto": "22.png",
+      "extraPhotos": [],
+      "videos": []
+   },
+   {
+      "id": "23",
+      "name": "Fragance Gramado",
+      "detail": "",
+      "year": "2024",
+      "city": "Gramado/RS",
+      "actions": [
+         "EXECUTION"
+      ],
+      "company": "Super Construtora",
+      "mainPhoto": "23.png",
+      "extraPhotos": [],
+      "videos": []
+   }
+]

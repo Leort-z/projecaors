@@ -7,11 +7,11 @@ import { useRef } from 'react'
 
 export default function Home() {
   const portfolioItems = [
-    { name: "Residencial Gabi", imagePath: "residencial-gabi.png" },
-    { name: "Residencial Larissa", imagePath: "residencial-larissa.png" },
-    { name: "Residencial LB", imagePath: "residencial-lb.png" },
-    { name: "Residencial Zatti", imagePath: "residencial-zatti.png" },
-    { name: "Sublime Residence", imagePath: "sublime-residence.png" }]
+    { name: "Residencial Gabi", imagePath: "3.png" },
+    { name: "Residencial Larissa", imagePath: "2.png" },
+    { name: "Residencial LB", imagePath: "5.png" },
+    { name: "Residencial Zatti", imagePath: "4.png" },
+    { name: "Sublime Residence", imagePath: "8.png" }]
 
   const servicoItems = [
     { name: "Construção", imagePath: "construcao.png" },
@@ -39,7 +39,7 @@ export default function Home() {
       <section className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 ' id='portfolio'>
         <h1 className="font-bold" >PORTFÓLIO</h1>
         <div className='flex flex-row h-3/4 justify-between mt-12 '>
-          {portfolioItems.map(({ name, imagePath }) => <PortfolioItem name={name} imagePath={imagePath} />)}
+          {portfolioItems.map(({ name, imagePath }) => <PortfolioItem name={name} imagePath={imagePath} key={name}/>)}
 
         </div>
         <button
@@ -52,7 +52,7 @@ export default function Home() {
         className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 ' id='servicos'>
         <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
         <div className='flex flex-wrap h-4/5 mt-12 justify-center gap-3 '>
-          {servicoItems.map(({ name, imagePath }) => <ServicoItem name={name} imagePath={imagePath} />)}
+          {servicoItems.map(({ name, imagePath }) => <ServicoItem name={name} imagePath={imagePath} key={name}/>)}
 
         </div>
         <button className="h-12 w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-5 hover:bg-green-950 ">VER MAIS
@@ -150,7 +150,7 @@ export default function Home() {
           </div>
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d865.9319525534949!2d-50.017724510561!3d-29.756589710652964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95228320911045f1%3A0x3bba1caa90c3b287!2sProje%C3%A7%C3%A3o%20Arquitetura%20e%20Engenharia!5e0!3m2!1spt-BR!2sbr!4v1737053648924!5m2!1spt-BR!2sbr"
-          className="w-3/4 h-3/4" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
+          className="w-3/4 h-3/4" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
 
       </section>
       <section
