@@ -3,61 +3,37 @@ import Image from 'next/image'
 import Link from 'next/link'
 import PortfolioItem from './components/PortfolioItem'
 import ServicoItem from './components/ServicoItem'
-import { useRef } from 'react'
+import Navbar from './components/Navbar';
+import portfolioData from '../public/json-data/portfolio-data.json'
+import servicosData from '../public/json-data/servicos-data.json'
 
 export default function Home() {
-  const portfolioItems = [
-    { name: "Residencial Gabi", imagePath: "3.png" },
-    { name: "Residencial Larissa", imagePath: "2.png" },
-    { name: "Residencial LB", imagePath: "5.png" },
-    { name: "Residencial Zatti", imagePath: "4.png" },
-    { name: "Sublime Residence", imagePath: "8.png" }]
-
-  const servicoItems = [
-    { name: "Construção", imagePath: "construcao.png" },
-    { name: "Execução de obras", imagePath: "execucao-obra.png" },
-    { name: "Laudo técnico", imagePath: "laudo-tecnico.png" },
-    { name: "Acompanhamento de Obras", imagePath: "construcao.png" },
-    { name: "Regularização de Imóveis", imagePath: "execucao-obra.png" },
-    { name: "Plotagem de Projetos", imagePath: "laudo-tecnico.png" }]
-
+  const portfolioItems = portfolioData;
+  const servicoItems = servicosData;
+  
   return (
     <>
-      <header
-        style={{ background: 'linear-gradient(360deg, rgba(15, 30, 21, 0) 0%, #0F1E15 0%)' }}
-        className='w-full flex justify-between items-center pl-40 pr-32 text-x min-h-24 fixed'
-      >
-        <Image src='/white-logo.png' width={120} height={75} alt='Logo da empresa Projeção' className='cursor-pointer' />
-        <nav className='flex justify-between gap-16 text-[#F8F1E7] '>
-          <Link className='hover:underline underline-offset-2' href='#portfolio' >PORTFÓLIO</Link>
-          <Link className='hover:underline underline-offset-2' href='#servicos'>SERVIÇOS</Link>
-          <Link className='hover:underline underline-offset-2' href='#quemsomos'>QUEM SOMOS</Link>
-          <Link className='hover:underline underline-offset-2' href='#contato'>CONTATO</Link>
-        </nav>
-      </header>
+      <Navbar />
       <main className="bg-[url('/main-image.png')] min-h-screen bg-cover bg-no-repeat	"></main>
-      <section className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 ' id='portfolio'>
+      <section className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 flex flex-col items-center' id='portfolio'>
         <h1 className="font-bold" >PORTFÓLIO</h1>
-        <div className='flex flex-row h-3/4 justify-between mt-12 '>
-          {portfolioItems.map(({ name, imagePath }) => <PortfolioItem name={name} imagePath={imagePath} key={name}/>)}
+        <div className='flex flex-row h-3/4 w-full justify-between mt-12 mb-6'>
+          {portfolioItems.slice(0,5).map(({ name, mainPhoto }) => <PortfolioItem name={name} imagePath={mainPhoto} key={name} />)}
 
         </div>
-        <button
-          className="h-12 w-1/4 text-lg border-2 border-yellow-600 hover:bg-amber-50">VER MAIS
-
-        </button>
+        <Link className="h-12 w-1/4 text-lg border-2 border-yellow-600 hover:bg-amber-50 flex items-center justify-center"
+          href="/portfolio"> VER MAIS</Link>
       </section>
 
       <section style={{ background: '#1B3124' }}
-        className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 ' id='servicos'>
+        className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 flex flex-col items-center' id='servicos'>
         <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
-        <div className='flex flex-wrap h-4/5 mt-12 justify-center gap-3 '>
-          {servicoItems.map(({ name, imagePath }) => <ServicoItem name={name} imagePath={imagePath} key={name}/>)}
+        <div className='flex flex-wrap h-4/5 w-full mt-12 justify-center gap-3 '>
+          {servicoItems.slice(0,6).map(({ name, mainPhoto }) => <ServicoItem name={name} imagePath={mainPhoto} key={name} />)}
 
         </div>
-        <button className="h-12 w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-5 hover:bg-green-950 ">VER MAIS
-
-        </button>
+        <Link className="h-12 w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-5 hover:bg-green-950 flex items-center justify-center"
+          href="/servicos"> VER MAIS</Link>
       </section>
       <section className='h-[calc(200%-96px)] px-12 py-12 flex flex-col gap-12 items-center' id='quemsomos'>
         <h1 className="text-7xl">Família Projeção</h1>

@@ -1,0 +1,88 @@
+[
+   {
+      "id":"1",
+      "name":"Projetos",
+      "detail":"Desenvolvimento e execução de projetos personalizados, incluindo:",
+      "extraDetail":[
+         "Arquitetônico",
+         "Estrutural",
+         "Complementares(elétrico, cabeamento, hidráulico, sanitário)"
+      ],
+      "mainPhoto":"1.png",
+      "extraPhotos":[
+         ""
+      ]
+   },
+   {
+      "id":"2",
+      "name":"Execução de Obras",
+      "detail":"Realização completa da construção de casas, prédios e empreendimentos, com atenção a cada detalhe e garantia de qualidade em todas as fases.",
+      "extraDetail":[
+         
+      ],
+      "mainPhoto":"execucao-obra.png",
+      "extraPhotos":[
+         ""
+      ]
+   },
+   {
+      "id":"3",
+      "name":"Acompanhamento de Obras",
+      "detail":"Supervisão técnica contínua, assegurando que todos os detalhes do projeto sejam executados conforme os padrões de excelência.",
+      "extraDetail":[
+         
+      ],
+      "mainPhoto":"1.png",
+      "extraPhotos":[
+         ""
+      ]
+   },
+   {
+      "id":"4",
+      "name":"Regularização de Imóveis",
+      "detail":"Assessoria completa para a regularização de imóveis junto à prefeitura e outros órgãos competentes, garantindo conformidade com as normas e leis vigentes.",
+      "extraDetail":[
+         
+      ],
+      "mainPhoto":"1.png",
+      "extraPhotos":[
+         ""
+      ]
+   },
+   {
+      "id":"5",
+      "name":"Laudos Técnicos",
+      "detail":"Emissão de laudos e pareceres técnicos para avaliação de imóveis, análise de estruturas e resolução de problemas construtivos.",
+      "extraDetail":[
+         
+      ],
+      "mainPhoto":"laudo-tecnico.png",
+      "extraPhotos":[
+         ""
+      ]
+   },
+   {
+      "id":"6",
+      "name":"Plotagem de Projetos",
+      "detail":"Impressão e plotagem de projetos com qualidade e precisão, atendendo às exigências técnicas e normativas.",
+      "extraDetail":[
+         
+      ],
+      "mainPhoto":"1.png",
+      "extraPhotos":[
+         ""
+      ]
+   },
+   {
+      "id":"7",
+      "name":"Construção",
+      "detail":"Realizamos a construção do início ao fim, desde fundações até acabamentos, sempre com foco em eficiência, segurança e qualidade.",
+      "extraDetail":[
+         
+      ],
+      "mainPhoto":"construcao.png",
+      "extraPhotos":[
+         ""
+      ]
+   }
+]

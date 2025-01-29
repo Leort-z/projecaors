@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ServicoItem from '../components/ServicoItem'
 import { useRef } from 'react'
+import Navbar from '../components/Navbar';
 
 export default function Servicos() {
     const servicoItems = [
@@ -15,18 +16,7 @@ export default function Servicos() {
 
     return (
         <>
-            <header
-                style={{ background: 'linear-gradient(360deg, rgba(15, 30, 21, 0) 0%, #0F1E15 0%)' }}
-                className='w-full flex justify-between items-center pl-40 pr-32 text-x min-h-24 fixed'
-            >
-                <Image src='/white-logo.png' width={120} height={75} alt='Logo da empresa Projeção' className='cursor-pointer' />
-                <nav className='flex justify-between gap-16 text-[#F8F1E7] '>
-                    <Link className='hover:underline underline-offset-2' href='#portfolio' >PORTFÓLIO</Link>
-                    <Link className='hover:underline underline-offset-2' href='#servicos'>SERVIÇOS</Link>
-                    <Link className='hover:underline underline-offset-2' href='#quemsomos'>QUEM SOMOS</Link>
-                    <Link className='hover:underline underline-offset-2' href='#contato'>CONTATO</Link>
-                </nav>
-            </header>
+            <Navbar/>
             <main className="bg-[url('/main-image.png')] min-h-screen bg-cover bg-no-repeat	"></main>
             <section style={{ background: '#1B3124' }}
                 className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 ' id='servicos'>

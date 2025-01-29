@@ -2,35 +2,20 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import PortfolioItem from '../components/PortfolioItem'
-import { useRef } from 'react'
+import portfolioData from '../../public/json-data/portfolio-data.json'
+import Navbar from '../components/Navbar';
 
 export default function Portifolio() {
-  const portfolioItems = [
-    { name: "Residencial Gabi", imagePath: "residencial-gabi.png" },
-    { name: "Residencial Larissa", imagePath: "residencial-larissa.png" },
-    { name: "Residencial LB", imagePath: "residencial-lb.png" },
-    { name: "Residencial Zatti", imagePath: "residencial-zatti.png" },
-    { name: "Sublime Residence", imagePath: "sublime-residence.png" }]
+  const portfolioItems = portfolioData;
 
   return (
     <>
-      <header
-        style={{ background: 'linear-gradient(360deg, rgba(15, 30, 21, 0) 0%, #0F1E15 0%)' }}
-        className='w-full flex justify-between items-center pl-40 pr-32 text-x min-h-24 fixed'
-      >
-        <Image src='/white-logo.png' width={120} height={75} alt='Logo da empresa Projeção' className='cursor-pointer' />
-        <nav className='flex justify-between gap-16 text-[#F8F1E7] '>
-          <Link className='hover:underline underline-offset-2' href='#portfolio' >PORTFÓLIO</Link>
-          <Link className='hover:underline underline-offset-2' href='#servicos'>SERVIÇOS</Link>
-          <Link className='hover:underline underline-offset-2' href='#quemsomos'>QUEM SOMOS</Link>
-          <Link className='hover:underline underline-offset-2' href='#contato'>CONTATO</Link>
-        </nav>
-      </header>
+      <Navbar/>
       <main className="bg-[url('/main-image.png')] min-h-screen bg-cover bg-no-repeat	"></main>
-      <section className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 ' id='portfolio'>
+      <section className=' text-center text-4xl px-36 py-12 ' id='portfolio'>
         <h1 className="font-bold" >PORTFÓLIO</h1>
-        <div className='flex flex-row h-3/4 justify-between mt-12 '>
-          {portfolioItems.map(({ name, imagePath }) => <PortfolioItem name={name} imagePath={imagePath} />)}
+        <div className='flex flex-wrap h-3/4 justify-between mt-12 gap-3'>
+          {portfolioItems.map(({ name, mainPhoto }) => <PortfolioItem name={name} imagePath={mainPhoto} />)}
 
         </div>
       </section>
