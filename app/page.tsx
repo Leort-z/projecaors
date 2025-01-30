@@ -8,8 +8,6 @@ import portfolioData from '../public/json-data/portfolio-data.json'
 import servicosData from '../public/json-data/servicos-data.json'
 
 export default function Home() {
-  const portfolioItems = portfolioData;
-  const servicoItems = servicosData;
   
   return (
     <>
@@ -17,8 +15,8 @@ export default function Home() {
       <main className="bg-[url('/main-image.png')] min-h-screen bg-cover bg-no-repeat	"></main>
       <section className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 flex flex-col items-center' id='portfolio'>
         <h1 className="font-bold" >PORTFÓLIO</h1>
-        <div className='flex flex-row h-3/4 w-full justify-between mt-12 mb-6'>
-          {portfolioItems.slice(0,5).map(({ name, mainPhoto }) => <PortfolioItem name={name} imagePath={mainPhoto} key={name} />)}
+        <div className='flex flex-row h-4/5 w-full justify-between mt-12 mb-4'>
+          {portfolioData.slice(0,5).map(({ name, mainPhoto }) => <PortfolioItem name={name} imagePath={mainPhoto} key={name} />)}
 
         </div>
         <Link className="h-12 w-1/4 text-lg border-2 border-yellow-600 hover:bg-amber-50 flex items-center justify-center"
@@ -29,7 +27,7 @@ export default function Home() {
         className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 flex flex-col items-center' id='servicos'>
         <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
         <div className='flex flex-wrap h-4/5 w-full mt-12 justify-center gap-3 '>
-          {servicoItems.slice(0,6).map(({ name, mainPhoto }) => <ServicoItem name={name} imagePath={mainPhoto} key={name} />)}
+          {servicosData.slice(0,6).map(({ name, mainPhoto }) => <ServicoItem name={name} imagePath={mainPhoto} key={name} />)}
 
         </div>
         <Link className="h-12 w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-5 hover:bg-green-950 flex items-center justify-center"

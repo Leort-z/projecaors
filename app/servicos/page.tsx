@@ -21,7 +21,7 @@ export default function Portifolio() {
       </main>
       <section className=' text-center text-4xl px-36 py-12 ' id='portfolio'>
         <div className='flex flex-wrap h-3/4 justify-between mt-12 gap-3'>
-          {servicosData.map(({ name, mainPhoto }) => <ServicoItem name={name} imagePath={mainPhoto} />)}
+          {servicosData.map(({ name, mainPhoto, id }) => <ServicoItem name={name} imagePath={mainPhoto} key={id} />)}
 
         </div>
       </section>

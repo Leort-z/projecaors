@@ -19,9 +19,9 @@ export default function Portifolio() {
           <h1 className='text-8xl select-none'>Portfólio</h1>
         </div>
       </main>
-      <section className=' text-center text-4xl px-36 py-12 ' id='portfolio'>
-        <div className='flex flex-wrap h-3/4 justify-between mt-12 gap-3'>
-          {portfolioData.map(({ name, mainPhoto }) => <PortfolioItem name={name} imagePath={mainPhoto} />)}
+      <section className='text-center text-4xl px-36 py-12 ' id='portfolio'>
+        <div className='flex flex-wrap h-full justify-between mt-12 gap-3'>
+          {portfolioData.map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} key={id} />)}
 
         </div>
       </section>
