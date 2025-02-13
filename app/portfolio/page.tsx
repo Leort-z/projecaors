@@ -21,7 +21,7 @@ export default function Portifolio() {
       </main>
       <section className='text-center text-4xl px-36 py-12 ' id='portfolio'>
         <div className='flex flex-wrap h-full justify-between mt-12 gap-3'>
-          {portfolioData.map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} key={id} />)}
+          {portfolioData.map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} />)}
 
         </div>
       </section>

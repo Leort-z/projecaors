@@ -16,10 +16,10 @@ export default function Home() {
       <section className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 flex flex-col items-center' id='portfolio'>
         <h1 className="font-bold" >PORTFÓLIO</h1>
         <div className='flex flex-row h-4/5 w-full justify-between mt-12 mb-4'>
-          {portfolioData.slice(0,5).map(({ name, mainPhoto }) => <PortfolioItem name={name} imagePath={mainPhoto} key={name} />)}
+          {portfolioData.slice(0,5).map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} />)}
 
         </div>
-        <Link className="h-12 w-1/4 text-lg border-2 border-yellow-600 hover:bg-amber-50 flex items-center justify-center"
+        <Link className="h-12 w-1/4 text-lg mt-5 border-2 border-yellow-600 hover:bg-amber-50 flex items-center justify-center"
           href="/portfolio"> VER MAIS</Link>
       </section>
 
@@ -27,10 +27,10 @@ export default function Home() {
         className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 flex flex-col items-center' id='servicos'>
         <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
         <div className='flex flex-wrap h-4/5 w-full mt-12 justify-center gap-3 '>
-          {servicosData.slice(0,6).map(({ name, mainPhoto }) => <ServicoItem name={name} imagePath={mainPhoto} key={name} />)}
+          {servicosData.slice(0,6).map(({ name, mainPhoto, id }) => <ServicoItem name={name} imagePath={mainPhoto} id={id} />)}
 
         </div>
-        <Link className="h-12 w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-5 hover:bg-green-950 flex items-center justify-center"
+        <Link className="h-12 w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-10 hover:bg-green-950 flex items-center justify-center"
           href="/servicos"> VER MAIS</Link>
       </section>
       <section className='h-[calc(200%-96px)] px-12 py-12 flex flex-col gap-12 items-center' id='quemsomos'>
