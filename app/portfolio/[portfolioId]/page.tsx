@@ -1,32 +1,35 @@
 "use client";
 import Navbar from '@/app/components/Navbar';
 import Image from 'next/image'
+import portfolioData from '../../../public/json-data/portfolio-data.json'
 import Link from 'next/link'
+import { useParams } from 'next/navigation';
 
-export default function DetalhesPortfolio({ params }:
-    { params: { portfolioId: string } }
-) {
-
+export default function DetalhesPortfolio() {
+    const params = useParams();
+    const registro = portfolioData.find(item => item.id === params.portfolioId);
     return (
         <>
             <Navbar />
-            <main className="bg-[url('/portfolio-images/residencial-gabi.png')] min-h-screen bg-cover bg-no-repeat	"></main>
+            <main className="min-h-screen bg-cover bg-no-repeat bg-center"
+                style={{ backgroundImage: `url('../portfolio-images/${registro?.mainPhoto}` }}></main>
             <section style={{ background: '#F8F1E7' }}
                 className='h-[calc(150%-96px)] text-center text-4xl px-36 py-12 ' id='servicos'>
 
                 <div className='flex h-full justify-between  w-full items-center '>
 
-                    <div className="h-full w-full bg-cover bg-center rounded" style={{ backgroundImage: "url('/portfolio-images/residencial-gabi.png" }} />
-
                     <div className='flex flex-col w-full h-full'>
-                        <h1 className='text-7xl'>Residencial Dona Cecília </h1>
-                        <h1>{params.portfolioId}</h1>
+                        <h1 className='text-7xl'>{registro?.name}</h1>
                         <div className='text-4xl w-full h-full flex flex-col items-start gap-6'>
-                            <p >Ano: 2006</p>
-                            <p>Capão da Canoa/RS </p>
+                            {registro?.detail ? <p>{registro?.detail}</p> : ""}
+                            <p >Ano: {registro?.year}</p>
+                            <p>{registro?.city}</p>
                             <p>Projeto ✅</p>
                             <p>Execução ✅ </p>
-                            <p>Construção: Super Construtora </p>
+                            {registro?.company ? <p>Construção: {registro?.company} </p> : ""}
+                            {registro?.videos ? <iframe className='h-3/5 w-4/5'
+                                src={registro?.videos[0]} allowFullScreen>
+                            </iframe> : ""}
                         </div>
                     </div>
                 </div>

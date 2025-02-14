@@ -16,7 +16,7 @@ export default function Home() {
       <section className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 flex flex-col items-center' id='portfolio'>
         <h1 className="font-bold" >PORTFÓLIO</h1>
         <div className='flex flex-row h-4/5 w-full justify-between mt-12 mb-4'>
-          {portfolioData.slice(0,5).map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} />)}
+          {portfolioData.slice(0,5).map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} key={id}/>)}
 
         </div>
         <Link className="h-12 w-1/4 text-lg mt-5 border-2 border-yellow-600 hover:bg-amber-50 flex items-center justify-center"
