@@ -8,6 +8,11 @@ import { useParams } from 'next/navigation';
 export default function DetalhesPortfolio() {
     const params = useParams();
     const registro = portfolioData.find(item => item.id === params.portfolioId);
+    const allActions = {
+        "PROJECT": "Projeto ✅",
+        "EXECUTION": "Execução ✅",
+        "CONSTRUCTION": "Construção ✅",
+    };
     return (
         <>
             <Navbar />
@@ -24,12 +29,19 @@ export default function DetalhesPortfolio() {
                             {registro?.detail ? <p>{registro?.detail}</p> : ""}
                             <p >Ano: {registro?.year}</p>
                             <p>{registro?.city}</p>
-                            <p>Projeto ✅</p>
-                            <p>Execução ✅ </p>
+                            {registro?.actions.map((action: string) =>(
+                                <p>{allActions[action]}</p>
+                            ))}
                             {registro?.company ? <p>Construção: {registro?.company} </p> : ""}
-                            {registro?.videos ? <iframe className='h-3/5 w-4/5'
-                                src={registro?.videos[0]} allowFullScreen>
-                            </iframe> : ""}
+                            {registro?.videos.map((video, index) => (
+                                <iframe
+                                    key={index}
+                                    className='h-4/5 w-4/5'
+                                    src={video}
+                                    allowFullScreen
+                                ></iframe>
+                            ))
+                            }
                         </div>
                     </div>
                 </div>
