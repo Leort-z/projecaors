@@ -1,17 +1,19 @@
+import Link from "next/link";
+
 interface ServicoItemProps {
     name: string;
     imagePath: string;
     id: string;
 }
-/* style={{background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)' }} */
-export default function ServicoItem({ name, imagePath }: ServicoItemProps) {
+
+export default function ServicoItem({ name, imagePath, id }: ServicoItemProps) {
 
     return (
         <div className="h-[18rem] w-1/4 flex flex-col justify-between max-w-md "> 
             <div className="h-full bg-cover bg-center rounded" style={{ backgroundImage: `url('/servicos-images/${imagePath}`}}>
-                <div className="group w-full h-full flex items-end justify-center pb-4 rounded bg-gradient-to-t from-black to-transparent cursor-pointer" >
-                    <h3 className="text-2xl  text-[#F8F1E7] group-hover:text-[#FF9E0E]  transition-colors duration-200">{name}</h3>
-                </div>
+                <Link className="w-full h-full flex items-end justify-center pb-4 rounded bg-gradient-to-t 
+                    from-black to-transparent cursor-pointer text-2xl  text-[#F8F1E7] hover:text-[#FF9E0E]  transition-colors duration-200" 
+                    href={`/servicos/${id}`}>{name}</Link>
             </div>
         </div>)
 }

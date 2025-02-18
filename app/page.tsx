@@ -27,7 +27,7 @@ export default function Home() {
         className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 flex flex-col items-center' id='servicos'>
         <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
         <div className='flex flex-wrap h-4/5 w-full mt-12 justify-center gap-3 '>
-          {servicosData.slice(0,6).map(({ name, mainPhoto, id }) => <ServicoItem name={name} imagePath={mainPhoto} id={id} />)}
+          {servicosData.slice(0,6).map(({ name, mainPhoto, id }) => <ServicoItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
 
         </div>
         <Link className="h-12 w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-10 hover:bg-green-950 flex items-center justify-center"
