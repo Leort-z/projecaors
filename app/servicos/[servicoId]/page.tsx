@@ -1,18 +1,24 @@
 "use client";
 import Navbar from '@/app/components/Navbar';
-import Image from 'next/image'
-import Link from 'next/link'
-import { useRef } from 'react'
+import Image from 'next/image';
+import Link from 'next/link';
+import servicosData from '../../../public/json-data/servicos-data.json';
+import { useParams } from 'next/navigation';
 
 export default function Detalhe() {
+    const params = useParams();
+    const registro = servicosData.find(item => item.id === params.servicoId);
 
     return (
         <>
             <Navbar />
-            <main className="bg-[url('/main-image.png')] min-h-screen bg-cover bg-no-repeat	"></main>
+            <main className="min-h-screen bg-cover bg-no-repeat bg-center"
+            style={{ backgroundImage: `url('../servicos-images/${registro?.mainPhoto}` }}></main>
             <section style={{ background: '#1B3124' }}
                 className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 ' id='servicos'>
                 <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
+                <p className='font-bold text-[#F8F1E7]'>{registro?.name}</p>
+                <p className='font-bold text-[#F8F1E7]'>{registro?.detail}</p>
 
             </section>
 
