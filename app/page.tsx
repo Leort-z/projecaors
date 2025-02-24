@@ -6,17 +6,75 @@ import ServicoItem from './components/ServicoItem'
 import Navbar from './components/Navbar';
 import portfolioData from '../public/json-data/portfolio-data.json'
 import servicosData from '../public/json-data/servicos-data.json'
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import { RxDotFilled } from 'react-icons/rx'
+import { SetStateAction, useState } from 'react';
 
 export default function Home() {
-  
+
+  const slides = [
+    {
+      url: 'servicos-images/construcao.png',
+      title: 'Construção',
+      subtitle: "Tornamos o seu sonho de construir no litoral em realidade"
+    },
+    {
+      url: 'servicos-images/execucao-obra.png',
+      title: 'Obras',
+      subtitle: "Executamos sua obra com excelência"
+    },
+    {
+      url: 'servicos-images/laudo-tecnico.png',
+      title: 'Laudo Técnico',
+      subtitle: "Garantimos a segurança da sua obra"
+    }
+  ]
+
+  const [currentIndex, setCurrentIndex] = useState(1);
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1
+    setCurrentIndex(newIndex);
+  }
+
+  const nextSlide = () => {
+    const isFirstSlide = currentIndex === slides.length - 1;
+    const newIndex = isFirstSlide ? 0 : currentIndex + 1
+    setCurrentIndex(newIndex);
+  }
+
+  const goToSlide = (slideIndex: SetStateAction<number>) => {
+    setCurrentIndex(slideIndex);
+  }
+
   return (
     <>
       <Navbar />
-      <main className="bg-[url('/main-image.png')] min-h-screen bg-cover bg-no-repeat	"></main>
+      <div className='h-full w-full m-auto group'>
+        <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-center bg-cover duration-500'>
+          <div className="h-full w-full opacity-60 text-[#F8F1E7] flex flex-col justify-center items-center" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
+            <h1 className='text-8xl select-none'>{slides[currentIndex].title}</h1>
+            <h3 className='text-2xl select-none'>{slides[currentIndex].subtitle}</h3>
+              <div className='flex justify- py-2'>
+                {slides.map((slide, slideIndex) => (
+                  <div key={slideIndex} onClick={() => goToSlide(slideIndex)} className='text-4xl cursor-pointer'>
+                    <RxDotFilled />
+                  </div>
+                ))}
+              </div>
+          </div>
+        </div>
+        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+          <BsChevronCompactLeft onClick={prevSlide} size={30} /></div>
+        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+          <BsChevronCompactRight onClick={nextSlide} size={30} /></div>
+
+      </div>
       <section className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 flex flex-col items-center' id='portfolio'>
         <h1 className="font-bold" >PORTFÓLIO</h1>
         <div className='flex flex-row h-4/5 w-full justify-between mt-12 mb-4'>
-          {portfolioData.slice(0,5).map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} key={id}/>)}
+          {portfolioData.slice(0, 5).map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
 
         </div>
         <Link className="h-12 w-1/4 text-lg mt-5 border-2 border-yellow-600 hover:bg-amber-50 flex items-center justify-center"
@@ -27,7 +85,7 @@ export default function Home() {
         className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 flex flex-col items-center' id='servicos'>
         <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
         <div className='flex flex-wrap h-4/5 w-full mt-12 justify-center gap-3 '>
-          {servicosData.slice(0,6).map(({ name, mainPhoto, id }) => <ServicoItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
+          {servicosData.slice(0, 6).map(({ name, mainPhoto, id }) => <ServicoItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
 
         </div>
         <Link className="h-12 w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-10 hover:bg-green-950 flex items-center justify-center"
