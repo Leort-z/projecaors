@@ -9,23 +9,31 @@ import servicosData from '../public/json-data/servicos-data.json'
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx'
 import { SetStateAction, useState } from 'react';
+import { Roboto, Inter  } from 'next/font/google'
+
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+})
+
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
   const slides = [
     {
       url: 'servicos-images/construcao.png',
-      title: 'Construção',
+      title: 'CONSTRUÇÃO',
       subtitle: "Tornamos o seu sonho de construir no litoral em realidade"
     },
     {
       url: 'servicos-images/execucao-obra.png',
-      title: 'Obras',
+      title: 'OBRAS',
       subtitle: "Executamos sua obra com excelência"
     },
     {
       url: 'servicos-images/laudo-tecnico.png',
-      title: 'Laudo Técnico',
+      title: 'LAUDO TÉCNICO',
       subtitle: "Garantimos a segurança da sua obra"
     }
   ]
@@ -49,20 +57,24 @@ export default function Home() {
   }
 
   return (
-    <>
+    <span className={inter.className}>
       <Navbar />
       <div className='h-full w-full m-auto group'>
-        <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-center bg-cover duration-500'>
-          <div className="h-full w-full opacity-60 text-[#F8F1E7] flex flex-col justify-center items-center" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
-            <h1 className='text-8xl select-none'>{slides[currentIndex].title}</h1>
-            <h3 className='text-2xl select-none'>{slides[currentIndex].subtitle}</h3>
-              <div className='flex justify- py-2'>
+        <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-center bg-cover  duration-300'>
+          <div className="h-full w-full opacity-60 text-[#F8F1E7] flex flex-col justify-center items-center relative" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}>
+            <div className='h-3/5 w-full flex flex-col  items-center justify-between absolute bottom-0'>
+              <div className='flex flex-col items-center '>
+                <h1 className='text-8xl select-none mb-4'>{slides[currentIndex].title}</h1>
+                <h3 className='text-2xl select-none'>{slides[currentIndex].subtitle}</h3>
+              </div>
+              <div className='flex py-2'>
                 {slides.map((slide, slideIndex) => (
                   <div key={slideIndex} onClick={() => goToSlide(slideIndex)} className='text-4xl cursor-pointer'>
                     <RxDotFilled />
                   </div>
                 ))}
               </div>
+            </div>
           </div>
         </div>
         <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
@@ -201,6 +213,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </span>
   )
 }
