@@ -1,5 +1,5 @@
 "use client";
-import Navbar from '@/app/components/Navbar';
+import Navbar from '@/app/components/DesktopNavbar';
 import Image from 'next/image';
 import Link from 'next/link';
 import servicosData from '../../../public/json-data/servicos-data.json';

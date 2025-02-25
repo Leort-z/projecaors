@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ServicoItem from '../components/ServicoItem'
 import servicosData from '../../public/json-data/servicos-data.json'
-import Navbar from '../components/Navbar';
+import Navbar from '../components/DesktopNavbar';
 
 export default function Portifolio() {
   const registro = servicosData.find(item => item.id === "2");

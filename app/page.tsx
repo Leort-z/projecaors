@@ -59,13 +59,13 @@ export default function Home() {
   return (
     <span className={inter.className}>
       <Navbar />
-      <div className='h-full w-full m-auto group'>
+      <div className='h-full w-full m-auto group '>
         <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-center bg-cover  duration-300'>
           <div className="h-full w-full opacity-60 text-[#F8F1E7] flex flex-col justify-center items-center relative" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}>
             <div className='h-3/5 w-full flex flex-col  items-center justify-between absolute bottom-0'>
               <div className='flex flex-col items-center '>
-                <h1 className='text-8xl select-none mb-4'>{slides[currentIndex].title}</h1>
-                <h3 className='text-2xl select-none'>{slides[currentIndex].subtitle}</h3>
+                <h1 className='text-5xl md:text-8xl select-none mb-4  '>{slides[currentIndex].title}</h1>
+                <h3 className='text-base md:text-2xl select-none text-center'>{slides[currentIndex].subtitle}</h3>
               </div>
               <div className='flex py-2'>
                 {slides.map((slide, slideIndex) => (
@@ -83,13 +83,13 @@ export default function Home() {
           <BsChevronCompactRight onClick={nextSlide} size={30} /></div>
 
       </div>
-      <section className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 flex flex-col items-center' id='portfolio'>
+      <section className='h-[calc(100%-96px)] text-center text-4xl md:px-36 px-20 py-12 flex flex-col items-center ' id='portfolio'>
         <h1 className="font-bold" >PORTFÓLIO</h1>
-        <div className='flex flex-row h-4/5 w-full justify-between mt-12 mb-4'>
-          {portfolioData.slice(0, 5).map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
+        <div className='flex flex-row h-4/5 w-full justify-between mt-12 mb-4 '>
+          {portfolioData.slice(0, 1).map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
 
         </div>
-        <Link className="h-12 w-1/4 text-lg mt-5 border-2 border-yellow-600 hover:bg-amber-50 flex items-center justify-center"
+        <Link className="h-12 md:w-1/4  w-3/4 text-lg mt-5 border-2 border-yellow-600 hover:bg-amber-50 flex items-center justify-center"
           href="/portfolio"> VER MAIS</Link>
       </section>
 
@@ -105,12 +105,12 @@ export default function Home() {
       </section>
       <section className='h-[calc(200%-96px)] px-12 py-12 flex flex-col gap-12 items-center' id='quemsomos'>
         <h1 className="text-7xl">Família Projeção</h1>
-        <div className='flex h-2/5 justify-between gap-3 w-5/6 items-center'>
-          <div className="h-full w-2/4 flex flex-col">
+        <div className='flex md:flex-row flex-col h-2/5 justify-between gap-3 w-5/6 items-center'>
+          <div className="h-screen md:h-full md:w-2/4 flex flex-col">
             <div className="h-full w-full bg-cover bg-center rounded" style={{ backgroundImage: "url('/historia-images/escritorio.png" }} />
-            <h3 className="text-lg text-center">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
+            <h3 className="text-xs md:text-lg text-center">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
           </div>
-          <p className='text-xl w-2/4'>[Início] <br /><br />
+          <p className='text-sm md:text-xl md:w-2/4'>[Início] <br /><br />
             A Projeção é uma empresa familiar com raízes profundas em
             Capão da Canoa e uma história que remonta ao final dos
             anos 80. Fundada por Mário Sérgio Jacobs Barrionuevo,
@@ -123,9 +123,9 @@ export default function Home() {
             Mário, Alcides Castilhos Barrionuevo, e que por muitos anos
             foi o lar da família Barrionuevo.</p>
         </div>
-
-        <div className='flex h-2/5 justify-between gap-3 w-5/6 items-center '>
-          <p className='text-xl w-2/4'>
+                
+        <div className='flex flex-col-reverse h-2/5 justify-between gap-3 w-5/6 items-center md:flex-row'>
+          <p className='text-sm md:text-xl md:w-2/4'>
             Mário Sérgio não foi apenas um engenheiro talentoso, mas também
             um professor dedicado e uma figura respeitada em Capão da Canoa.
             Ele contribuiu ativamente para o desenvolvimento da cidade,
@@ -136,18 +136,17 @@ export default function Home() {
             disposto a compartilhar seu conhecimento, Mário adorava explicar e
             orientar, e por isso era amplamente admirado por sua generosidade e
             dedicação à comunidade.</p>
-          <div className="h-full w-2/5 flex flex-col ">
+          <div className="h-full md:w-2/5 flex flex-col ">
             <div className="h-full w-full bg-cover min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/mario.png" }} />
-            <h3 className="text-lg text-center">(Legenda: Mário Sérgio fundador da empresa Projeção)</h3>
+            <h3 className="text-xs md:text-lg text-center">(Legenda: Mário Sérgio fundador da empresa Projeção)</h3>
           </div>
-        </div>
-
-        <div className='flex h-2/5 justify-between w-5/6 items-center'>
-          <div className="h-full w-2/5 flex flex-col">
-            <div className="h-full w-full bg-cover min-h-80 min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/formatura.png" }} />
-            <h3 className="text-lg text-center">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
+        </div>        {/** 
+        <div className='flex h-2/5 justify-between w-5/6 items-center flex-col md:flex-row'>
+          <div className="h-full md:w-2/5 flex flex-col">
+            <div className="md:h-full w-full bg-cover min-h-80 min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/formatura.png" }} />
+            <h3 className="text-xs md:text-lg text-center">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
           </div>
-          <p className='text-xl w-2/4'>
+          <p className='text-sm md:text-xl md:w-2/4'>
             Ao longo das décadas, a Projeção evoluiu e se modernizou, mantendo a essência de
             qualidade e comprometimento com o cliente. Em 2016, Ramiro Nunes Barrionuevo, filho de
             Mário Sérgio e também engenheiro civil formado pela PUCRS, passou a integrar a
@@ -160,11 +159,11 @@ export default function Home() {
             mantendo vivo o legado de dedicação e excelência deixado por ele. Após a formatura de
             Isadora em 2022, a empresa continuou sua trajetória de expansão, atuando não apenas
             em Capão da Canoa e Xangri-lá, mas também em outras cidades como Porto Alegre e Gramado.</p>
-        </div>
+        </div> */}
       </section>
-
+                
       <section style={{ background: '#1B3124' }}
-        className='h-[calc(140%-96px)] text-center text-4xl px-36 py-16 flex flex-col items-center gap-16' id='contato'>
+        className='h-[calc(140%-96px)] text-center text-4xl px-36 py-16 flex flex-col items-center gap-16 ' id='contato'>
         <div className='flex w-full h-2/4 items-center justify-center'>
           <div className='flex flex-col h-3/4 w-2/5 items-start gap-4 '>
             <h1 className="font-bold text-[#F8F1E7] text-6xl">Contato:</h1>

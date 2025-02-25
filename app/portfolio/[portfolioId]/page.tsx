@@ -1,5 +1,5 @@
 "use client";
-import Navbar from '@/app/components/Navbar';
+import Navbar from '@/app/components/DesktopNavbar';
 import Image from 'next/image'
 import portfolioData from '../../../public/json-data/portfolio-data.json'
 import Link from 'next/link'
