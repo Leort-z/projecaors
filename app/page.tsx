@@ -57,9 +57,9 @@ export default function Home() {
   }
 
   return (
-    <span className={inter.className}>
+    <div className={inter.className} style={{overflowX: 'hidden'}}>
       <Navbar />
-      <div className='h-full w-full m-auto group '>
+      <div className='h-[100vh]  w-full m-auto group '>
         <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-center bg-cover  duration-300'>
           <div className="h-full w-full opacity-60 text-[#F8F1E7] flex flex-col justify-center items-center relative" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}>
             <div className='h-3/5 w-full flex flex-col  items-center justify-between absolute bottom-0'>
@@ -106,8 +106,8 @@ export default function Home() {
       <section className='h-[calc(200%-96px)] px-12 py-12 flex flex-col gap-12 items-center' id='quemsomos'>
         <h1 className="text-7xl">Família Projeção</h1>
         <div className='flex md:flex-row flex-col h-2/5 justify-between gap-3 w-5/6 items-center'>
-          <div className="h-screen md:h-full md:w-2/4 flex flex-col">
-            <div className="h-full w-full bg-cover bg-center rounded" style={{ backgroundImage: "url('/historia-images/escritorio.png" }} />
+          <div className="h-full md:h-full md:w-2/4 flex flex-col">
+            <div className="md:h-[50vh] h-[30vh] w-full bg-cover bg-center rounded" style={{ backgroundImage: "url('/historia-images/escritorio.png" }} />
             <h3 className="text-xs md:text-lg text-center">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
           </div>
           <p className='text-sm md:text-xl md:w-2/4'>[Início] <br /><br />
@@ -136,7 +136,7 @@ export default function Home() {
             disposto a compartilhar seu conhecimento, Mário adorava explicar e
             orientar, e por isso era amplamente admirado por sua generosidade e
             dedicação à comunidade.</p>
-          <div className="h-full md:w-2/5 flex flex-col ">
+          <div className="h-[30vh] md:h-[50vh] md:w-2/5 flex flex-col ">
             <div className="h-full w-full bg-cover min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/mario.png" }} />
             <h3 className="text-xs md:text-lg text-center">(Legenda: Mário Sérgio fundador da empresa Projeção)</h3>
           </div>
@@ -212,6 +212,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </span>
+    </div>
   )
 }
