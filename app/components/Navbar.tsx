@@ -5,11 +5,11 @@ export default function Navbar() {
 
     return (
         <>
-        <div className="visible md:invisible ">
+        <div className="visible lg:invisible ">
             <MobileNavbar/>
         </div>
 
-        <div className="invisible md:visible ">
+        <div className="invisible lg:visible ">
             <DesktopNavbar/> 
         </div>
         </>)
