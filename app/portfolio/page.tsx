@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import PortfolioItem from '../components/PortfolioItem'
 import portfolioData from '../../public/json-data/portfolio-data.json'
-import Navbar from '../components/DesktopNavbar';
+import Navbar from '../components/Navbar';
 
 export default function Portifolio() {
   const registro = portfolioData.find(item => item.id === "20");

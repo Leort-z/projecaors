@@ -9,7 +9,7 @@ import servicosData from '../public/json-data/servicos-data.json'
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx'
 import { SetStateAction, useState } from 'react';
-import { Roboto, Inter  } from 'next/font/google'
+import { Roboto, Inter } from 'next/font/google'
 
 const roboto = Roboto({
   weight: '400',
@@ -57,7 +57,7 @@ export default function Home() {
   }
 
   return (
-    <div className={inter.className} style={{overflowX: 'hidden'}}>
+    <div className={inter.className} style={{ overflowX: 'hidden' }}>
       <Navbar />
       <div className='h-[100vh]  w-full m-auto group '>
         <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-center bg-cover  duration-300'>
@@ -123,7 +123,7 @@ export default function Home() {
             Mário, Alcides Castilhos Barrionuevo, e que por muitos anos
             foi o lar da família Barrionuevo.</p>
         </div>
-                
+
         <div className='flex flex-col-reverse h-2/5 justify-between gap-3 w-5/6 items-center md:flex-row'>
           <p className='text-sm md:text-xl md:w-2/4'>
             Mário Sérgio não foi apenas um engenheiro talentoso, mas também
@@ -140,7 +140,7 @@ export default function Home() {
             <div className="h-full w-full bg-cover min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/mario.png" }} />
             <h3 className="text-xs md:text-lg text-center">(Legenda: Mário Sérgio fundador da empresa Projeção)</h3>
           </div>
-        </div>        
+        </div>
         <div className='flex h-2/5 justify-between w-5/6 items-center flex-col md:flex-row'>
           <div className="h-full md:w-2/5 flex flex-col">
             <div className="md:h-full w-full bg-cover min-h-80 min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/formatura.png" }} />
@@ -159,13 +159,13 @@ export default function Home() {
             mantendo vivo o legado de dedicação e excelência deixado por ele. Após a formatura de
             Isadora em 2022, a empresa continuou sua trajetória de expansão, atuando não apenas
             em Capão da Canoa e Xangri-lá, mas também em outras cidades como Porto Alegre e Gramado.</p>
-        </div> 
+        </div>
       </section>
-                
+
       <section style={{ background: '#1B3124' }}
         className='h-[calc(140%-96px)] text-center text-4xl px-36 py-16 flex flex-col items-center gap-16 ' id='contato'>
-        <div className='flex w-full h-2/4 items-center justify-center'>
-          <div className='flex flex-col h-3/4 w-2/5 items-start gap-4 '>
+        <div className='flex md:w-full h-2/4 items-center justify-center md:flex-row flex-col'>
+          <div className='flex flex-col  h-3/4 w-[40vh] md:w-2/5 items-start gap-4  mb-6'>
             <h1 className="font-bold text-[#F8F1E7] text-6xl">Contato:</h1>
             <div className='flex items-center text-2xl'>
               <Image src='/icones/pin.png' width={50} height={31.25} alt='Ícone localização' />
@@ -184,12 +184,12 @@ export default function Home() {
               <h3 className='text-[#F8F1E7]'>contato@projecao.com.br</h3>
             </div>
           </div>
-          <div className='flex flex-col w-2/5 h-3/4 items-start gap-3 '>
-            <input className="border-4 border-yellow-600 w-full text-2xl outline-none" placeholder='Nome*'></input>
-            <input className="border-4 border-yellow-600 w-full text-2xl outline-none" placeholder='E-mail*'></input>
-            <input className="border-4 border-yellow-600 w-full text-2xl outline-none" placeholder='Telefone*'></input>
-            <textarea className="border-4 border-yellow-600 w-full h-full text-2xl outline-none" placeholder='Mensagem*'></textarea>
-            <button className="w-1/3 text-lg border-2 border-yellow-600 text-[#A77A37] hover:bg-green-950 ">ENVIAR MENSAGEM</button>
+          <div className='flex flex-col w-[40vh] md:w-2/5 h-3/4 items-start gap-3 '>
+            <input className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='Nome*'></input>
+            <input className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='E-mail*'></input>
+            <input className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='Telefone*'></input>
+            <textarea className="border-2 border-yellow-600 w-full h-full text-2xl outline-none" placeholder='Mensagem*'></textarea>
+            <button className="w-[40vh] md:w-1/3 text-lg border-2 border-yellow-600 text-[#A77A37] hover:bg-green-950 ">ENVIAR MENSAGEM</button>
           </div>
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d865.9319525534949!2d-50.017724510561!3d-29.756589710652964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95228320911045f1%3A0x3bba1caa90c3b287!2sProje%C3%A7%C3%A3o%20Arquitetura%20e%20Engenharia!5e0!3m2!1spt-BR!2sbr!4v1737053648924!5m2!1spt-BR!2sbr"
@@ -197,8 +197,10 @@ export default function Home() {
 
       </section>
       <section
-        className='h-[calc(30%)] text-center text-2xl px-24 justify-center' id='servicos'>
-        <div className='flex h-full justify-between'>
+        className='md:h-[30vh] h-[30vh] text-center text-2xl px-16 flex md:items-center justify-center '
+        id='servicos'>
+        <div className='flex justify-between w-full  items-center '>
+          
           <div className='flex flex-col gap-6 items-start justify-center'>
             <Link href='#portfolio'>PORTFÓLIO</Link>
             <Link href='#servicos'>SERVIÇOS</Link>
