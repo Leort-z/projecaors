@@ -76,13 +76,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <div className='lg:hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
           <BsChevronCompactLeft onClick={prevSlide} size={30} /></div>
-        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <div className='lg:hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
           <BsChevronCompactRight onClick={nextSlide} size={30} /></div>
 
       </div>
-      <section className='h-[calc(100%-96px)] text-center text-4xl lg:px-36 px-20 py-12 flex flex-col items-center' id='portfolio'>
+      <section className='h-[calc(100%-96px)] text-center text-4xl lg:px-36 px-16 py-12 flex flex-col items-center' id='portfolio'>
         <h1 className="font-bold" >PORTFÓLIO</h1>
         <PortfolioSection/>
         <Link className="h-12 lg:w-1/4  w-3/4 text-lg border-2 border-yellow-600 hover:bg-amber-50 flex items-center justify-center"
