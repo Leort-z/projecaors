@@ -9,6 +9,7 @@ import { RxDotFilled } from 'react-icons/rx'
 import { SetStateAction, useState } from 'react';
 import { Roboto, Inter } from 'next/font/google'
 import PortfolioSection from './components/PortfolioSection';
+import ServicosSection from './components/ServicosSection';
 
 const roboto = Roboto({
   weight: '400',
@@ -90,13 +91,10 @@ export default function Home() {
       </section>
 
       <section style={{ background: '#1B3124' }}
-        className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 flex flex-col items-center' id='servicos'>
+        className='h-[calc(100%-96px)] text-center text-4xl px-12 lg:px-36 py-12 flex flex-col items-center' id='servicos'>
         <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
-        <div className='flex flex-wrap h-4/5 w-full mt-12 justify-center gap-3 '>
-          {servicosData.slice(0, 6).map(({ name, mainPhoto, id }) => <ServicoItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
-
-        </div>
-        <Link className="h-12 w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-10 hover:bg-green-950 flex items-center justify-center"
+        <ServicosSection/>
+        <Link className="h-12 w-3/4 lg:w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-6 hover:bg-green-950 flex items-center justify-center"
           href="/servicos"> VER MAIS</Link>
       </section>
       <section className='h-[calc(200%-96px)] px-12 py-12 flex flex-col gap-12 items-center' id='quemsomos'>

@@ -3,7 +3,7 @@ import portfolioData from '../../public/json-data/portfolio-data.json'
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { useState } from 'react';
 
-export default function Navbar() {
+export default function PortfolioSection() {
 
     const [currentIndex, setCurrentIndex] = useState(1);
     
