@@ -39,14 +39,6 @@ export default function MobileNavbar() {
                         </li>
                     </ul>
                 </div>
-                {/*           
-            <nav className='flex justify-between gap-16 text-[#F8F1E7] '>
-                <Link className='hover:underline underline-offset-2' href='/' >INÍCIO</Link>
-                <Link className='hover:underline underline-offset-2' href='/#portfolio' >PORTFÓLIO</Link>
-                <Link className='hover:underline underline-offset-2' href='/#servicos'>SERVIÇOS</Link>
-                <Link className='hover:underline underline-offset-2' href='/#quemsomos'>QUEM SOMOS</Link>
-                <Link className='hover:underline underline-offset-2' href='/#contato'>CONTATO</Link>
-            </nav>*/}
             </div>
         </header>)
 }

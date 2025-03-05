@@ -196,10 +196,10 @@ export default function Home() {
         <div className='flex justify-between w-full  items-center '>
           
           <div className='flex flex-col gap-6 items-start justify-center'>
-            <Link href='#portfolio'>PORTFÓLIO</Link>
-            <Link href='#servicos'>SERVIÇOS</Link>
-            <Link href='#quemsomos'>QUEM SOMOS</Link>
-            <Link href='#contato'>CONTATO</Link>
+            <Link href='/#portfolio'>PORTFÓLIO</Link>
+            <Link href='/#servicos'>SERVIÇOS</Link>
+            <Link href='/#quemsomos'>QUEM SOMOS</Link>
+            <Link href='/#contato'>CONTATO</Link>
           </div>
           <div className='flex flex-col gap-4 justify-center'>
             <Image className='cursor-pointer' src='/icones/facebook.png' width={60} height={47.5} alt='Ícone localização' />

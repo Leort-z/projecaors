@@ -19,22 +19,22 @@ export default function Portifolio() {
           <h1 className='text-8xl select-none'>Portfólio</h1>
         </div>
       </main>
-      <section className='text-center text-4xl px-36 py-12 ' id='portfolio'>
+      <section className='text-center text-4xl px-16 lg:px-36 py-12 ' id='portfolio'>
         <div className='flex flex-wrap h-full justify-between mt-12 gap-3'>
-          {portfolioData.map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} />)}
+          {portfolioData.map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} key={id}/>)}
 
         </div>
-      </section>
-
+      </section>      
       <section
-        className='h-[calc(30%)] text-center text-2xl px-24 justify-center' id='servicos'
-        style={{ background: '#1B3124' }}>
-        <div className='flex h-full justify-between'>
+        className='lg:h-[30vh] h-[30vh] text-center text-2xl px-8 flex lg:items-center justify-center '
+        id='servicos' style={{ background: '#1B3124' }}>
+        <div className='flex justify-between w-full  items-center '>
+          
           <div className='flex flex-col gap-6 items-start justify-center text-[#F8F1E7]'>
-            <Link href='#portfolio'>PORTFÓLIO</Link>
-            <Link href='#servicos'>SERVIÇOS</Link>
-            <Link href='#quemsomos'>QUEM SOMOS</Link>
-            <Link href='#contato'>CONTATO</Link>
+            <Link href='/#portfolio'>PORTFÓLIO</Link>
+            <Link href='/#servicos'>SERVIÇOS</Link>
+            <Link href='/#quemsomos'>QUEM SOMOS</Link>
+            <Link href='/#contato'>CONTATO</Link>
           </div>
           <div className='flex flex-col gap-4 justify-center'>
             <Image className='cursor-pointer' src='/icones/facebook.png' width={60} height={47.5} alt='Ícone localização' />
