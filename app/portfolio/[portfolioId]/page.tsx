@@ -1,5 +1,5 @@
 "use client";
-import Navbar from '@/app/components/DesktopNavbar';
+import Navbar from '@/app/components/Navbar';
 import Image from 'next/image'
 import portfolioData from '../../../public/json-data/portfolio-data.json'
 import Link from 'next/link'
@@ -16,10 +16,11 @@ export default function DetalhesPortfolio() {
     return (
         <>
             <Navbar />
-            <main className="min-h-screen bg-cover bg-no-repeat bg-center"
+            <main className="h-full w-full in-h-screen bg-cover bg-no-repeat bg-center"
                 style={{ backgroundImage: `url('../portfolio-images/${registro?.mainPhoto}` }}></main>
             <section style={{ background: '#F8F1E7' }}
-                className='h-[calc(150%-96px)] text-center text-4xl px-36 py-12 ' id='servicos'>
+                className='lg:h-[30vh] text-center text-2xl px-8 flex lg:items-center justify-center '
+                 id='servicos'>
 
                 <div className='flex h-full justify-between  w-full items-center '>
 

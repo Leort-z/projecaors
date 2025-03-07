@@ -1,5 +1,5 @@
 "use client";
-import Navbar from '@/app/components/DesktopNavbar';
+import Navbar from '@/app/components/Navbar';
 import Image from 'next/image';
 import Link from 'next/link';
 import servicosData from '../../../public/json-data/servicos-data.json';
@@ -12,10 +12,11 @@ export default function Detalhe() {
     return (
         <>
             <Navbar />
-            <main className="min-h-screen bg-cover bg-no-repeat bg-center"
+            <main className="h-full w-full in-h-screen bg-cover bg-no-repeat bg-center"
             style={{ backgroundImage: `url('../servicos-images/${registro?.mainPhoto}` }}></main>
             <section style={{ background: '#1B3124' }}
-                className='h-[calc(100%-96px)] text-center text-4xl px-36 py-12 ' id='servicos'>
+                className='lg:h-[30vh] text-center text-2xl px-8 flex flex-col lg:items-center justify-center '
+                id='servicos'>
                 <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
                 <p className='font-bold text-[#F8F1E7]'>{registro?.name}</p>
                 <p className='font-bold text-[#F8F1E7]'>{registro?.detail}</p>
