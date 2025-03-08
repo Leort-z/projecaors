@@ -1,9 +1,8 @@
 "use client";
-import Image from 'next/image'
-import Link from 'next/link'
 import PortfolioItem from '../components/PortfolioItem'
 import portfolioData from '../../public/json-data/portfolio-data.json'
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function Portifolio() {
   const registro = portfolioData.find(item => item.id === "20");
@@ -21,27 +20,14 @@ export default function Portifolio() {
       </main>
       <section className='text-center text-4xl px-16 lg:px-36 py-12 ' id='portfolio'>
         <div className='flex flex-wrap h-full justify-between mt-12 gap-3'>
-          {portfolioData.map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} key={id}/>)}
+          {portfolioData.map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
 
         </div>
-      </section>      
+      </section>
       <section
         className='lg:h-[30vh] h-[30vh] text-center text-2xl px-8 flex lg:items-center justify-center '
         id='servicos' style={{ background: '#1B3124' }}>
-        <div className='flex justify-between w-full  items-center '>
-          
-          <div className='flex flex-col gap-6 items-start justify-center text-[#F8F1E7]'>
-            <Link href='/#portfolio'>PORTFÓLIO</Link>
-            <Link href='/#servicos'>SERVIÇOS</Link>
-            <Link href='/#quemsomos'>QUEM SOMOS</Link>
-            <Link href='/#contato'>CONTATO</Link>
-          </div>
-          <div className='flex flex-col gap-4 justify-center'>
-            <Image className='cursor-pointer' src='/icones/facebook.png' width={60} height={47.5} alt='Ícone localização' />
-            <Image className='cursor-pointer' src='/icones/instagram.png' width={60} height={47.5} alt='Ícone localização' />
-            <Image className='cursor-pointer' src='/icones/whatsapp-cinza.png' width={60} height={47.5} alt='Ícone localização' />
-          </div>
-        </div>
+        <Footer source="" />
       </section>
     </>
   )

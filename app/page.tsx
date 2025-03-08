@@ -1,15 +1,18 @@
 "use client";
-import Image from 'next/image'
-import Link from 'next/link'
-import ServicoItem from './components/ServicoItem'
+import Link from 'next/link';
 import Navbar from './components/Navbar';
-import servicosData from '../public/json-data/servicos-data.json'
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx'
 import { SetStateAction, useState } from 'react';
-import { Roboto, Inter } from 'next/font/google'
+import { Roboto, Inter } from 'next/font/google';
+import { IoLocationOutline } from "react-icons/io5";
+import { MdLocalPhone } from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa";
+import { PiEnvelopeSimpleLight } from "react-icons/pi";
 import PortfolioSection from './components/PortfolioSection';
 import ServicosSection from './components/ServicosSection';
+import Footer from './components/Footer';
+
 
 const roboto = Roboto({
   weight: '400',
@@ -85,7 +88,7 @@ export default function Home() {
       </div>
       <section className='h-[calc(100%-96px)] text-center text-4xl lg:px-36 px-16 py-12 flex flex-col items-center' id='portfolio'>
         <h1 className="font-bold" >PORTFÓLIO</h1>
-        <PortfolioSection/>
+        <PortfolioSection />
         <Link className="h-12 lg:w-1/4  w-3/4 text-lg border-2 border-yellow-600 hover:bg-amber-50 flex items-center justify-center"
           href="/portfolio"> VER MAIS</Link>
       </section>
@@ -93,7 +96,7 @@ export default function Home() {
       <section style={{ background: '#1B3124' }}
         className='h-[calc(100%-96px)] text-center text-4xl px-12 lg:px-36 py-12 flex flex-col items-center' id='servicos'>
         <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
-        <ServicosSection/>
+        <ServicosSection />
         <Link className="h-12 w-3/4 lg:w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-6 hover:bg-green-950 flex items-center justify-center"
           href="/servicos"> VER MAIS</Link>
       </section>
@@ -161,27 +164,26 @@ export default function Home() {
         <div className='flex lg:w-full h-2/4 items-center justify-center lg:flex-row flex-col'>
           <div className='flex flex-col  h-3/4 w-[40vh] lg:w-2/5 items-start gap-4  mb-6'>
             <h1 className="font-bold text-[#F8F1E7] text-6xl">Contato:</h1>
-            <div className='flex items-center text-2xl'>
-              <Image src='/icones/pin.png' width={50} height={31.25} alt='Ícone localização' />
+            <div className='flex items-center text-2xl gap-4'>
+              <IoLocationOutline className='text-[#F8F1E7] text-5xl' />
               <h3 className='text-[#F8F1E7]'>Rua peri, 1400 - Capão da Canoa/RS</h3>
             </div>
             <div className='flex items-center text-2xl gap-4'>
-              <Image src='/icones/telefone.png' width={40} height={25} alt='Ícone telefone' />
+              <MdLocalPhone className='text-[#F8F1E7] text-5xl' />
               <h3 className='text-[#F8F1E7]'>51 99090-9090</h3>
             </div>
             <div className='flex items-center text-2xl gap-4'>
-              <Image src='/icones/whatsapp.png' width={40} height={25} alt='Ícone whatsapp' />
+              <FaWhatsapp className='text-[#F8F1E7] text-5xl' />
               <h3 className='text-[#F8F1E7]'>51 99090-9090</h3>
             </div>
             <div className='flex items-center text-2xl gap-4'>
-              <Image src='/icones/carta.png' width={40} height={25} alt='Ícone email' />
+              <PiEnvelopeSimpleLight className='text-[#F8F1E7] text-5xl' />
               <h3 className='text-[#F8F1E7]'>contato@projecao.com.br</h3>
             </div>
           </div>
           <div className='flex flex-col w-[40vh] lg:w-2/5 h-3/4 items-start gap-3 '>
             <input className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='Nome*'></input>
             <input className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='E-mail*'></input>
-            <input className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='Telefone*'></input>
             <textarea className="border-2 border-yellow-600 w-full h-full text-2xl outline-none" placeholder='Mensagem*'></textarea>
             <button className="w-[40vh] lg:w-1/3 text-lg border-2 border-yellow-600 text-[#A77A37] hover:bg-green-950 ">ENVIAR MENSAGEM</button>
           </div>
@@ -193,20 +195,8 @@ export default function Home() {
       <section
         className='lg:h-[30vh] h-[30vh] text-center text-2xl px-16 flex lg:items-center justify-center '
         id='servicos'>
-        <div className='flex justify-between w-full  items-center '>
-          
-          <div className='flex flex-col gap-6 items-start justify-center'>
-            <Link href='/#portfolio'>PORTFÓLIO</Link>
-            <Link href='/#servicos'>SERVIÇOS</Link>
-            <Link href='/#quemsomos'>QUEM SOMOS</Link>
-            <Link href='/#contato'>CONTATO</Link>
-          </div>
-          <div className='flex flex-col gap-4 justify-center'>
-            <Image className='cursor-pointer' src='/icones/facebook.png' width={60} height={47.5} alt='Ícone localização' />
-            <Image className='cursor-pointer' src='/icones/instagram.png' width={60} height={47.5} alt='Ícone localização' />
-            <Image className='cursor-pointer' src='/icones/whatsapp-cinza.png' width={60} height={47.5} alt='Ícone localização' />
-          </div>
-        </div>
+
+        <Footer source="White" />
       </section>
     </div>
   )
