@@ -30,8 +30,8 @@ export default function DetalhesPortfolio() {
                             {registro?.detail ? <p>{registro?.detail}</p> : ""}
                             <p >Ano: {registro?.year}</p>
                             <p>{registro?.city}</p>
-                            {registro?.actions.map((action: string) =>(
-                                <p>{allActions[action]}</p>
+                            {registro?.actions.map((action: string) =>(                                
+                                <p key={action}>{allActions[action]}</p>
                             ))}
                             {registro?.company ? <p>Construção: {registro?.company} </p> : ""}
                             {registro?.videos.map((video, index) => (
