@@ -185,7 +185,7 @@ export default function Home() {
             <input className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='Nome*'></input>
             <input className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='E-mail*'></input>
             <textarea className="border-2 border-yellow-600 w-full h-full text-2xl outline-none" placeholder='Mensagem*'></textarea>
-            <button className="w-[40vh] lg:w-1/3 text-lg border-2 border-yellow-600 text-[#A77A37] hover:bg-green-950 ">ENVIAR MENSAGEM</button>
+            <button className="w-full text-lg border-2 border-yellow-600 text-[#A77A37] hover:bg-green-950 ">ENVIAR MENSAGEM</button>
           </div>
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d865.9319525534949!2d-50.017724510561!3d-29.756589710652964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95228320911045f1%3A0x3bba1caa90c3b287!2sProje%C3%A7%C3%A3o%20Arquitetura%20e%20Engenharia!5e0!3m2!1spt-BR!2sbr!4v1737053648924!5m2!1spt-BR!2sbr"
