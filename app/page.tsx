@@ -181,12 +181,17 @@ export default function Home() {
               <h3 className='text-[#F8F1E7]'>contato@projecao.com.br</h3>
             </div>
           </div>
-          <div className='flex flex-col w-[40vh] lg:w-2/5 h-3/4 items-start gap-3 '>
-            <input className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='Nome*'></input>
-            <input className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='E-mail*'></input>
-            <textarea className="border-2 border-yellow-600 w-full h-full text-2xl outline-none" placeholder='Mensagem*'></textarea>
-            <button className="w-full text-lg border-2 border-yellow-600 text-[#A77A37] hover:bg-green-950 ">ENVIAR MENSAGEM</button>
+          <div className='w-[40vh] lg:w-2/5 h-3/4 '>
+            <form action="https://formsubmit.co/alisson-sds@hotmail.com" method="POST" className='w-full h-full flex flex-col items-start gap-3'>
+              <input type="text" name="name" required className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='Digite seu nome*'></input>
+              <input type="email" name="email" required className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='Digite seu E-mail*'></input>
+              <textarea name="message" required className="border-2 border-yellow-600 w-full h-full text-2xl outline-none" placeholder='Digite sua mensagem*'></textarea>
+              <button type="submit" className="w-full text-lg border-2 border-yellow-600 text-[#A77A37] hover:bg-green-950 ">ENVIAR MENSAGEM</button>
+              <input type="hidden" name="_subject" value="Novo Contato!"></input>
+              <input type="hidden" name="_captcha" value="false"></input>
+            </form>
           </div>
+
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d865.9319525534949!2d-50.017724510561!3d-29.756589710652964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95228320911045f1%3A0x3bba1caa90c3b287!2sProje%C3%A7%C3%A3o%20Arquitetura%20e%20Engenharia!5e0!3m2!1spt-BR!2sbr!4v1737053648924!5m2!1spt-BR!2sbr"
           className="w-[40vh] h-[50vh] lg:w-[140vh] lg:h-[60vh]" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
