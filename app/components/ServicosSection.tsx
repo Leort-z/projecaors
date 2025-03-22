@@ -24,7 +24,7 @@ export default function ServicosSection() {
             <div className="lg:hidden w-full h-full flex items-center  justify-between">
                 <div className='text-white bg-black opacity-70 p-2 rounded absolute left-[5%]'>
                     <IoIosArrowBack onClick={prevSlide} size={40} /></div>
-                <div className='flex flex-col w-full duration-300 justify-between mt-6'>
+                <div className='flex flex-col w-full duration-300 justify-between mt-12 '>
                     {servicosData.slice(currentIndex, currentIndex+2).map(({ name, mainPhoto, id }) => <ServicoItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
                 </div>
 
@@ -33,7 +33,7 @@ export default function ServicosSection() {
             </div>
 
             <div className="hidden lg:block w-full h-full">
-                <div className='flex flex-wrap h-4/5 w-full mt-12 justify-center gap-3 '>
+                <div className='flex flex-wrap h-4/5 w-full mt-12 justify-center gap-3'>
                     {servicosData.slice(0, 6).map(({ name, mainPhoto, id }) => <ServicoItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
 
                 </div>

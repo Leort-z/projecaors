@@ -97,17 +97,17 @@ export default function Home() {
         className='h-[calc(100%-96px)] text-center text-4xl px-12 lg:px-36 py-12 flex flex-col items-center' id='servicos'>
         <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
         <ServicosSection />
-        <Link className="h-12 w-3/4 lg:w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-6 hover:bg-green-950 flex items-center justify-center"
+        <Link className="h-12 w-3/4 lg:w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-10 lg:mt-12 hover:bg-green-950 flex items-center justify-center"
           href="/servicos"> VER MAIS</Link>
       </section>
-      <section className='h-[calc(200%-96px)] px-12 py-12 flex flex-col gap-12 items-center' id='quemsomos'>
-        <h1 className="text-7xl">Família Projeção</h1>
+      <section className='h-[calc(200%-96px)] px-12 py-12 flex flex-col gap-8 items-center text-center' id='quemsomos'>
+        <h1 className="text-5xl">Família Projeção</h1>
         <div className='flex lg:flex-row flex-col h-2/5 justify-between gap-3 w-5/6 items-center'>
-          <div className="h-full lg:h-full lg:w-2/4 flex flex-col">
-            <div className="lg:h-[50vh] h-[30vh] w-full bg-cover bg-center rounded" style={{ backgroundImage: "url('/historia-images/escritorio.png" }} />
+          <div className="lg:h-[50vh] h-[30vh] lg:w-2/5 flex flex-col">
+            <div className="h-full w-full bg-cover bg-center rounded" style={{ backgroundImage: "url('/historia-images/escritorio.png" }} />
             <h3 className="text-xs lg:text-lg text-center">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
           </div>
-          <p className='text-sm lg:text-xl lg:w-2/4'>[Início] <br /><br />
+          <p className='text-xs lg:text-xl lg:w-2/4'>
             A Projeção é uma empresa familiar com raízes profundas em
             Capão da Canoa e uma história que remonta ao final dos
             anos 80. Fundada por Mário Sérgio Jacobs Barrionuevo,
@@ -122,7 +122,7 @@ export default function Home() {
         </div>
 
         <div className='flex flex-col-reverse h-2/5 justify-between gap-3 w-5/6 items-center lg:flex-row'>
-          <p className='text-sm lg:text-xl lg:w-2/4'>
+          <p className='text-xs lg:text-xl lg:w-2/4'>
             Mário Sérgio não foi apenas um engenheiro talentoso, mas também
             um professor dedicado e uma figura respeitada em Capão da Canoa.
             Ele contribuiu ativamente para o desenvolvimento da cidade,
@@ -133,17 +133,17 @@ export default function Home() {
             disposto a compartilhar seu conhecimento, Mário adorava explicar e
             orientar, e por isso era amplamente admirado por sua generosidade e
             dedicação à comunidade.</p>
-          <div className="h-[30vh] lg:h-[50vh] lg:w-2/5 flex flex-col ">
-            <div className="h-full w-full bg-cover min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/mario.png" }} />
+          <div className="lg:h-[50vh] h-[30vh] lg:w-2/5 flex flex-col ">
+            <div className="h-full w-full bg-cover bg-center rounded" style={{ backgroundImage: "url('/historia-images/mario.png" }} />
             <h3 className="text-xs lg:text-lg text-center">(Legenda: Mário Sérgio fundador da empresa Projeção)</h3>
           </div>
         </div>
-        <div className='flex h-2/5 justify-between w-5/6 items-center flex-col lg:flex-row'>
-          <div className="h-full lg:w-2/5 flex flex-col">
-            <div className="lg:h-full w-full bg-cover min-h-80 min-w-80 bg-center rounded" style={{ backgroundImage: "url('/historia-images/formatura.png" }} />
-            <h3 className="text-xs lg:text-lg text-center">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
+        <div className='flex h-2/5 justify-between w-5/6 items-center flex-col lg:flex-row gap-3'>
+          <div className="lg:h-[50vh] h-[30vh] lg:w-2/5  flex flex-col">
+            <div className="h-full w-full bg-cover bg-center rounded" style={{ backgroundImage: "url('/historia-images/formatura.png" }} />
+            <h3 className="text-xs lg:text-lg text-center">(Legenda: Ramiro e Isadora, Formatura de Engenharia Civil 2022/1 PUCRS)</h3>
           </div>
-          <p className='text-sm lg:text-xl lg:w-2/4'>
+          <p className='text-xs lg:text-xl lg:w-2/4'>
             Ao longo das décadas, a Projeção evoluiu e se modernizou, mantendo a essência de
             qualidade e comprometimento com o cliente. Em 2016, Ramiro Nunes Barrionuevo, filho de
             Mário Sérgio e também engenheiro civil formado pela PUCRS, passou a integrar a

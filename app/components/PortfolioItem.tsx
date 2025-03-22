@@ -15,6 +15,6 @@ export default function PortfolioItem({ name, imagePath, id }: PortfolioItemProp
                 <Link className="flex items-center justify-center h-12 w-3/5 text-lg bg-amber-50 border-2 border-yellow-600 text-[#A77A37] hover:bg-opacity-80 transition-colors duration-200"
                     href={`/portfolio/${id}`}> SABER MAIS</Link>
             </div>
-            <h3 className="text-2xl">{name}</h3>
+            <h3 className="text-xl">{name}</h3>
         </div>)
 }
