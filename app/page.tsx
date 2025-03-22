@@ -162,7 +162,7 @@ export default function Home() {
       <section style={{ background: '#1B3124' }}
         className='h-[calc(140%-96px)] text-center text-4xl px-36 py-16 flex flex-col items-center gap-16 ' id='contato'>
         <div className='flex lg:w-full h-2/4 items-center justify-center lg:flex-row flex-col'>
-          <div className='flex flex-col  h-3/4 w-[40vh] lg:w-2/5 items-start gap-4  mb-6'>
+          <div className='flex flex-col  h-3/4 w-[40vh] lg:w-2/5 items-start gap-4 mb-6 '>
             <h1 className="font-bold text-[#F8F1E7] text-6xl">Contato:</h1>
             <div className='flex items-center text-2xl gap-4'>
               <IoLocationOutline className='text-[#F8F1E7] text-5xl' />
@@ -182,10 +182,10 @@ export default function Home() {
             </div>
           </div>
           <div className='w-[40vh] lg:w-2/5 h-3/4 '>
-            <form action="https://formsubmit.co/alisson-sds@hotmail.com" method="POST" className='w-full h-full flex flex-col items-start gap-3'>
-              <input type="text" name="name" required className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='Digite seu nome*'></input>
-              <input type="email" name="email" required className="border-2 border-yellow-600 w-full text-2xl outline-none" placeholder='Digite seu E-mail*'></input>
-              <textarea name="message" required className="border-2 border-yellow-600 w-full h-full text-2xl outline-none" placeholder='Digite sua mensagem*'></textarea>
+            <form action="https://formsubmit.co/alisson-sds@hotmail.com" method="POST" className='w-full h-full flex flex-col items-start gap-3 lg:mt-10'>
+              <input type="text" name="name" required className="border-2 border-yellow-600 w-full text-2xl outline-none placeholder:text-lg" placeholder='Digite seu nome*'></input>
+              <input type="email" name="email" required className="border-2 border-yellow-600 w-full text-2xl outline-none placeholder:text-lg" placeholder='Digite seu E-mail*'></input>
+              <textarea name="message" required className="border-2 border-yellow-600 w-full h-full text-2xl outline-none placeholder:text-lg" placeholder='Digite sua mensagem*'></textarea>
               <button type="submit" className="w-full text-lg border-2 border-yellow-600 text-[#A77A37] hover:bg-green-950 ">ENVIAR MENSAGEM</button>
               <input type="hidden" name="_subject" value="Novo Contato!"></input>
               <input type="hidden" name="_captcha" value="false"></input>
