@@ -1,8 +1,5 @@
 import { useState } from "react";
 import { RiMenuFill } from "react-icons/ri";
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function MobileNavbar() {
 
@@ -20,7 +17,7 @@ export default function MobileNavbar() {
                 <button className='pr-6' data-collapse-target="collapse" type="button" onClick={() => setIsVisible(!isVisible)}>
                     <RiMenuFill size={35} color="#F8F1E7" />
                 </button>
-                <div className={`${isVisible ? 'block' : 'hidden'} w-full ${inter.className}`} >
+                <div className={`${isVisible ? 'block' : 'hidden'} w-full `} >
                     <ul className="flex flex-col font-light mt-4 rounded-lg">
                         <li>
                             <a style={{ background: '#182f21' }} href='/' className="block py-2 px-3 text-white text-4xl rounded-sm" onClick={() => setIsVisible(!isVisible)}>Início</a>

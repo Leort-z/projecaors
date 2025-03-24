@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx'
 import { SetStateAction, useState } from 'react';
-import { Roboto, Inter } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import { IoLocationOutline } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
@@ -14,12 +14,25 @@ import ServicosSection from './components/ServicosSection';
 import Footer from './components/Footer';
 
 
-const roboto = Roboto({
-  weight: '400',
+const roboto700 = Roboto({
+  weight: '700',
+  subsets: ['latin'],
+  variable: '--font-roboto-bold',
+})
+
+const roboto500 = Roboto({
+  weight: '500',
   subsets: ['latin'],
 })
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto400 = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-roboto'
+})
+
+
+
 
 export default function Home() {
 
@@ -60,15 +73,15 @@ export default function Home() {
   }
 
   return (
-    <div className={inter.className} style={{ overflowX: 'hidden' }}>
+    <div style={{ overflowX: 'hidden' }}>
       <Navbar />
       <div className='h-[100vh]  w-full m-auto group '>
         <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-center bg-cover  duration-300'>
           <div className="h-full w-full opacity-60 text-[#F8F1E7] flex flex-col justify-center items-center relative" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}>
             <div className='h-3/5 w-full flex flex-col  items-center justify-between absolute bottom-0'>
               <div className='flex flex-col items-center '>
-                <h1 className='text-5xl lg:text-8xl select-none mb-4  '>{slides[currentIndex].title}</h1>
-                <h3 className='text-base lg:text-2xl select-none text-center'>{slides[currentIndex].subtitle}</h3>
+                <h1 className={`text-5xl lg:text-8xl select-none mb-4 ${roboto700.className}`}>{slides[currentIndex].title}</h1>
+                <h3 className={`text-base lg:text-2xl select-none text-center ${roboto400.className}`}>{slides[currentIndex].subtitle}</h3>
               </div>
               <div className='flex py-2'>
                 {slides.map((slide, slideIndex) => (
@@ -87,22 +100,22 @@ export default function Home() {
 
       </div>
       <section className='h-[calc(100%-96px)] text-center text-4xl lg:px-36 px-16 py-12 flex flex-col items-center' id='portfolio'>
-        <h1 className="font-bold" >PORTFÓLIO</h1>
+        <h1  className={roboto700.className}>PORTFÓLIO</h1>
         <PortfolioSection />
-        <Link className="h-12 lg:w-1/4  w-3/4 text-lg border-2 border-yellow-600 hover:bg-amber-50 flex items-center justify-center"
+        <Link className={`h-12 lg:w-1/4  w-3/4 text-lg border-2 border-yellow-600 hover:bg-amber-50 flex items-center justify-center ${roboto500.className}`}
           href="/portfolio"> VER MAIS</Link>
       </section>
 
       <section style={{ background: '#1B3124' }}
         className='h-[calc(100%-96px)] text-center text-4xl px-12 lg:px-36 py-12 flex flex-col items-center' id='servicos'>
-        <h1 className="font-bold text-[#F8F1E7]">SERVIÇOS</h1>
+        <h1 className={`text-[#F8F1E7] ${roboto700.className}`} >SERVIÇOS</h1>
         <ServicosSection />
-        <Link className="h-12 w-3/4 lg:w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-10 lg:mt-12 hover:bg-green-950 flex items-center justify-center"
+        <Link className={`h-12 w-3/4 lg:w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-10 lg:mt-12 hover:bg-green-950 flex items-center justify-center ${roboto500.className}`}
           href="/servicos"> VER MAIS</Link>
       </section>
       <section className='h-[calc(200%-96px)] px-12 py-12 flex flex-col gap-8 items-center text-center' id='quemsomos'>
-        <h1 className="text-5xl">Família Projeção</h1>
-        <div className='flex lg:flex-row flex-col h-2/5 justify-between gap-3 w-5/6 items-center'>
+        <h1 className={`text-5xl ${roboto700.className}`}>Família Projeção</h1>
+        <div className={`flex lg:flex-row flex-col h-2/5 justify-between gap-3 w-5/6 items-center ${roboto400.className}`}>
           <div className="lg:h-[50vh] h-[30vh] lg:w-2/5 flex flex-col">
             <div className="h-full w-full bg-cover bg-center rounded" style={{ backgroundImage: "url('/historia-images/escritorio.png" }} />
             <h3 className="text-xs lg:text-lg text-center">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
@@ -121,7 +134,7 @@ export default function Home() {
             foi o lar da família Barrionuevo.</p>
         </div>
 
-        <div className='flex flex-col-reverse h-2/5 justify-between gap-3 w-5/6 items-center lg:flex-row'>
+        <div className={`flex flex-col-reverse h-2/5 justify-between gap-3 w-5/6 items-center lg:flex-row  ${roboto400.className}`}>
           <p className='text-xs lg:text-xl lg:w-2/4'>
             Mário Sérgio não foi apenas um engenheiro talentoso, mas também
             um professor dedicado e uma figura respeitada em Capão da Canoa.
@@ -138,7 +151,7 @@ export default function Home() {
             <h3 className="text-xs lg:text-lg text-center">(Legenda: Mário Sérgio fundador da empresa Projeção)</h3>
           </div>
         </div>
-        <div className='flex h-2/5 justify-between w-5/6 items-center flex-col lg:flex-row gap-3'>
+        <div className={`flex h-2/5 justify-between w-5/6 items-center flex-col lg:flex-row gap-3  ${roboto400.className}`}>
           <div className="lg:h-[50vh] h-[30vh] lg:w-2/5  flex flex-col">
             <div className="h-full w-full bg-cover bg-center rounded" style={{ backgroundImage: "url('/historia-images/formatura.png" }} />
             <h3 className="text-xs lg:text-lg text-center">(Legenda: Ramiro e Isadora, Formatura de Engenharia Civil 2022/1 PUCRS)</h3>
@@ -160,7 +173,7 @@ export default function Home() {
       </section>
 
       <section style={{ background: '#1B3124' }}
-        className='h-[calc(140%-96px)] text-center text-4xl px-36 py-16 flex flex-col items-center gap-16 ' id='contato'>
+        className={`h-[calc(140%-96px)] text-center text-4xl px-36 py-16 flex flex-col items-center gap-16 ${roboto500.className}`} id='contato'>
         <div className='flex lg:w-full h-2/4 items-center justify-center lg:flex-row flex-col'>
           <div className='flex flex-col  h-3/4 w-[40vh] lg:w-2/5 items-start gap-4 mb-6 '>
             <h1 className="font-bold text-[#F8F1E7] text-6xl">Contato:</h1>
@@ -186,7 +199,7 @@ export default function Home() {
               <input type="text" name="name" required className="border-2 border-yellow-600 w-full text-2xl outline-none placeholder:text-lg" placeholder='Digite seu nome*'></input>
               <input type="email" name="email" required className="border-2 border-yellow-600 w-full text-2xl outline-none placeholder:text-lg" placeholder='Digite seu E-mail*'></input>
               <textarea name="message" required className="border-2 border-yellow-600 w-full h-full text-2xl outline-none placeholder:text-lg" placeholder='Digite sua mensagem*'></textarea>
-              <button type="submit" className="w-full text-lg border-2 border-yellow-600 text-[#A77A37] hover:bg-green-950 ">ENVIAR MENSAGEM</button>
+              <button type="submit" className={`w-full text-lg border-2 border-yellow-600 text-[#A77A37] hover:bg-green-950 ${roboto500.className}`}>ENVIAR MENSAGEM</button>
               <input type="hidden" name="_subject" value="Novo Contato!"></input>
               <input type="hidden" name="_captcha" value="false"></input>
             </form>

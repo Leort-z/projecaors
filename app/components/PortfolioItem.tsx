@@ -1,4 +1,17 @@
 import Link from "next/link";
+import { Merriweather, Roboto } from 'next/font/google';
+
+const merriweather = Merriweather({
+  weight: '400',
+  style: 'italic',
+  subsets: ['latin'],
+})
+
+const roboto = Roboto({
+    weight: '500',
+    subsets: ['latin'],
+  })
+
 
 interface PortfolioItemProps {
     name: string;
@@ -12,9 +25,9 @@ export default function PortfolioItem({ name, imagePath, id }: PortfolioItemProp
         <div className='h-[68vh] lg:w-1/6 w-full flex flex-col' >
             <div className="h-[60vh] bg-cover min-h-80 bg-center rounded flex items-end justify-center pb-4"
                 style={{ backgroundImage: `url('/portfolio-images/${imagePath}` }}>
-                <Link className="flex items-center justify-center h-12 w-3/5 text-lg bg-amber-50 border-2 border-yellow-600 text-[#A77A37] hover:bg-opacity-80 transition-colors duration-200"
+                <Link className={`flex items-center justify-center h-12 w-3/5 text-lg bg-amber-50 border-2 border-yellow-600 text-[#A77A37] hover:bg-opacity-80 transition-colors duration-200 ${roboto.className}`}
                     href={`/portfolio/${id}`}> SABER MAIS</Link>
             </div>
-            <h3 className="text-xl">{name}</h3>
+            <h3 className={`text-xl ${merriweather.className}`}>{name}</h3>
         </div>)
 }
