@@ -4,57 +4,77 @@ import portfolioData from '../../../public/json-data/portfolio-data.json'
 import { useParams } from 'next/navigation';
 import WhatsAppButton from '@/app/components/WhatsAppButton';
 import Footer from '@/app/components/Footer';
+import { Merriweather } from 'next/font/google';
+
+const merriweather = Merriweather({
+    weight: '400',
+    style: 'italic',
+    subsets: ['latin'],
+})
 
 export default function DetalhesPortfolio() {
     const params = useParams();
     const registro = portfolioData.find(item => item.id === params.portfolioId);
+    const extraPhotos = registro?.extraPhotos;
+
     const allActions = {
         "PROJECT": "Projeto ✅",
         "EXECUTION": "Execução ✅",
         "CONSTRUCTION": "Construção ✅",
     };
+
     return (
         <>
             <Navbar />
-            <main className="h-full w-full in-h-screen bg-cover bg-no-repeat bg-center"
-                style={{ backgroundImage: `url('../portfolio-images/${registro?.mainPhoto}` }}></main>
-            <section style={{ background: '#F8F1E7' }}
-                className='text-center text-2xl flex items-center justify-center flex-col'
-                 id='servicos'>
+            <main className="h-3/4 w-full bg-cover bg-no-repeat bg-center"
+                style={{ backgroundImage: `url('../portfolio-images/${registro?.mainPhoto}` }}>
+                <div className="h-full w-full text-[#F8F1E7] flex justify-center items-center text-center" >
+                    <h1 className={`text-6xl lg:text-8xl select-none ${merriweather.className}`}>{registro?.name}</h1>
+                </div>
+            </main>
+            <div style={{ background: '#F8F1E7' }}
+                className='text-center text-2xl flex items-center justify-center flex-col'>
 
                 <div className='flex h-full justify-between  w-full items-center '>
 
                     <div className='flex flex-col w-full h-full'>
-                        <h1 className='text-4xl'>{registro?.name}</h1>
-                        <div className='text-4xl w-full h-full flex flex-col items-start gap-6'>
+                        <div className='text-4xl w-full h-full flex flex-col gap-6'>
+                            <div className='flex flex-wrap h-full justify-between p-8 gap-3'>
+                                {registro?.extraPhotos?.some(photo => photo.trim() !== "") ? (
+                                    registro?.extraPhotos.map((photo, index) => (
+                                        <div className="h-[30vh] w-[45vh] bg-cover bg-center" key={index} style={{ backgroundImage: `url(../portfolio-images/${photo})` }} />
+                                    ))) : ""}
+                            </div>
                             {registro?.detail ? <p>{registro?.detail}</p> : ""}
                             <p >Ano: {registro?.year}</p>
                             <p>{registro?.city}</p>
-                            {registro?.actions.map((action: string) =>(                                
+                            {registro?.actions.map((action: string) => (
                                 <p key={action}>{allActions[action]}</p>
                             ))}
                             {registro?.company ? <p>Construção: {registro?.company} </p> : ""}
                             {registro?.videos.map((video, index) => (
-                                <iframe
-                                    key={index}
-                                    className='h-4/5 w-4/5'
-                                    src={video}
-                                    allowFullScreen
-                                ></iframe>
+                                <div className='h-[80vh] w-full flex items-center justify-center'>
+                                    <iframe
+                                        key={index}
+                                        className='p-4 h-full w-3/4'
+                                        src={video}
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
                             ))
                             }
                         </div>
-                    </div>                    
+                    </div>
                 </div>
-                <WhatsAppButton source={"Portfolio"}/>
-            </section>
+                <WhatsAppButton source={"Portfolio"} />
+            </div>
 
-            <section
-                className='lg:h-[30vh] h-[30vh] text-center text-2xl px-8 flex lg:items-center justify-center ' 
+            <div
+                className='lg:h-[30vh] h-[30vh] text-center text-2xl px-8 flex lg:items-center justify-center '
                 id='servicos'
                 style={{ background: '#1B3124' }}>
                 <Footer source="" />
-            </section>
+            </div>
         </>
     )
 }

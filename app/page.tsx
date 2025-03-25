@@ -78,10 +78,10 @@ export default function Home() {
       <div className='h-[100vh]  w-full m-auto group '>
         <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-center bg-cover  duration-300'>
           <div className="h-full w-full opacity-60 text-[#F8F1E7] flex flex-col justify-center items-center relative" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}>
-            <div className='h-3/5 w-full flex flex-col  items-center justify-between absolute bottom-0'>
-              <div className='flex flex-col items-center '>
+            <div className='h-3/5 w-full flex flex-col  items-center  justify-between absolute bottom-0'>
+              <div className='flex flex-col items-center text-center'>
                 <h1 className={`text-5xl lg:text-8xl select-none mb-4 ${roboto700.className}`}>{slides[currentIndex].title}</h1>
-                <h3 className={`text-base lg:text-2xl select-none text-center ${roboto400.className}`}>{slides[currentIndex].subtitle}</h3>
+                <h3 className={`text-xl lg:text-2xl select-none p-2 ${roboto400.className}`}>{slides[currentIndex].subtitle}</h3>
               </div>
               <div className='flex py-2'>
                 {slides.map((slide, slideIndex) => (
