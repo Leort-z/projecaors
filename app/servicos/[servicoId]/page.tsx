@@ -23,7 +23,7 @@ export default function Detalhe() {
                 <p className='font-bold '>{registro?.name}</p>
                 <p className='font-bold '>{registro?.detail}</p>
 
-                <WhatsAppButton source={"Portfolio"} />
+                <WhatsAppButton />
 
             </section>
 

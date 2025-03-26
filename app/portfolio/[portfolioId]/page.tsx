@@ -4,12 +4,18 @@ import portfolioData from '../../../public/json-data/portfolio-data.json'
 import { useParams } from 'next/navigation';
 import WhatsAppButton from '@/app/components/WhatsAppButton';
 import Footer from '@/app/components/Footer';
-import { Merriweather } from 'next/font/google';
+import { Merriweather, Roboto } from 'next/font/google';
 
 const merriweather = Merriweather({
     weight: '400',
     style: 'italic',
     subsets: ['latin'],
+})
+
+const roboto400 = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-roboto'
 })
 
 export default function DetalhesPortfolio() {
@@ -33,16 +39,16 @@ export default function DetalhesPortfolio() {
                 </div>
             </main>
             <div style={{ background: '#F8F1E7' }}
-                className='text-center text-2xl flex items-center justify-center flex-col'>
+                className='text-start text-2xl flex items-center justify-center flex-col'>
 
-                <div className='flex h-full justify-between  w-full items-center '>
+                <div className='flex h-full justify-between  w-full items-center  p-16'>
 
                     <div className='flex flex-col w-full h-full'>
-                        <div className='text-4xl w-full h-full flex flex-col gap-6'>
-                            <div className='flex flex-wrap h-full justify-between p-8 gap-3'>
+                        <div className={`text-2xl w-full h-full flex flex-col gap-3  ${roboto400.className}`}>
+                            <div className='flex flex-wrap h-full justify-center gap-3'>
                                 {registro?.extraPhotos?.some(photo => photo.trim() !== "") ? (
                                     registro?.extraPhotos.map((photo, index) => (
-                                        <div className="h-[30vh] w-[45vh] bg-cover bg-center" key={index} style={{ backgroundImage: `url(../portfolio-images/${photo})` }} />
+                                        <div className="h-[30vh] w-[45vh] bg-cover bg-center shadow-2xl" key={index} style={{ backgroundImage: `url(../portfolio-images/${photo})` }} />
                                     ))) : ""}
                             </div>
                             {registro?.detail ? <p>{registro?.detail}</p> : ""}
@@ -56,7 +62,7 @@ export default function DetalhesPortfolio() {
                                 <div className='h-[80vh] w-full flex items-center justify-center'>
                                     <iframe
                                         key={index}
-                                        className='p-4 h-full w-3/4'
+                                        className='h-full w-3/4'
                                         src={video}
                                         allowFullScreen
                                     ></iframe>
@@ -66,7 +72,7 @@ export default function DetalhesPortfolio() {
                         </div>
                     </div>
                 </div>
-                <WhatsAppButton source={"Portfolio"} />
+                <WhatsAppButton />
             </div>
 
             <div
