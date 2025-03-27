@@ -102,7 +102,7 @@ export default function Home() {
       <section className='h-[calc(100%-96px)] text-center text-4xl lg:px-36 px-16 py-12 flex flex-col items-center' id='portfolio'>
         <h1  className={roboto700.className}>PORTFÓLIO</h1>
         <PortfolioSection />
-        <Link className={`h-12 lg:w-1/4  w-3/4 text-lg border-2 border-yellow-600 flex items-center hover:shadow-[0_15px_15px_rgba(0,0,0,0.50)] justify-center ${roboto500.className}`}
+        <Link className={`h-12 mt-8 lg:w-1/4  w-3/4 text-lg border-2 border-yellow-600 flex items-center hover:shadow-[0_15px_15px_rgba(0,0,0,0.50)] justify-center ${roboto500.className}`}
           href="/portfolio"> VER MAIS</Link>
       </section>
 
