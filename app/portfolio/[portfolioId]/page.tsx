@@ -60,9 +60,8 @@ export default function DetalhesPortfolio() {
                             ))}
                             {registro?.company ? <p>Construção: {registro?.company} </p> : ""}
                             {registro?.videos.map((video, index) => (
-                                <div className='h-[80vh] w-full flex items-center justify-center'>
-                                    <iframe
-                                        key={index}
+                                <div className='h-[80vh] w-full flex items-center justify-center' key={index}>
+                                    <iframe                                        
                                         className='h-full w-3/4'
                                         src={video}
                                         allowFullScreen
