@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import WhatsAppButton from '@/app/components/WhatsAppButton';
 import Footer from '@/app/components/Footer';
 import { Merriweather, Roboto } from 'next/font/google';
+import a from '../../../public/fundo-projeto.png'
 
 const merriweather = Merriweather({
     weight: '400',
@@ -40,12 +41,11 @@ export default function DetalhesPortfolio() {
                 </div>
             </main>
             <div style={{ background: '#F8F1E7' }}
-                className='text-start text-2xl flex items-center justify-center flex-col'>
-
-                <div className='flex h-full justify-between  w-full items-center  p-16'>
+                className='text-start text-2xl flex items-center justify-center flex-col'>                
+                <div className='flex h-full justify-between  w-full items-center p-8 lg:p-16'>
 
                     <div className='flex flex-col w-full h-full'>
-                        <div className={`text-2xl w-full h-full flex flex-col gap-3  ${roboto400.className}`}>
+                        <div className={`text-2xl w-full h-full flex flex-col gap-3 ${roboto400.className}`}>
                             <div className='flex flex-wrap h-full justify-center gap-3'>
                                 {registro?.extraPhotos?.some(photo => photo.trim() !== "") ? (
                                     registro?.extraPhotos.map((photo, index) => (
@@ -60,9 +60,9 @@ export default function DetalhesPortfolio() {
                             ))}
                             {registro?.company ? <p>Construção: {registro?.company} </p> : ""}
                             {registro?.videos.map((video, index) => (
-                                <div className='h-[80vh] w-full flex items-center justify-center' key={index}>
-                                    <iframe                                        
-                                        className='h-full w-3/4'
+                                <div className='lg:h-[80vh] h-[50vh] w-full flex items-center justify-center' key={index}>
+                                    <iframe
+                                        className='h-full w-full'
                                         src={video}
                                         allowFullScreen
                                     ></iframe>

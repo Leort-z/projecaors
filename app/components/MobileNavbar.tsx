@@ -10,7 +10,7 @@ export default function MobileNavbar() {
     return (
         <header
             style={{ background: '#0F1E15' }}
-            className='w-screen text-x min-h-24 fixed z-10'
+            className='w-screen text-x min-h-24 fixed z-20'
         >
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="/" className="h-[8vh] items-center flex pl-6">

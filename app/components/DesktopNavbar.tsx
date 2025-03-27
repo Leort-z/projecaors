@@ -6,7 +6,7 @@ export default function DesktopNavbar() {
     return (
         <header
             style={{ background: '#0F1E15' }}
-            className='w-full flex justify-between items-center pl-10 lg:pl-40 pr-32 text-x min-h-24 fixed z-10'
+            className='w-full flex justify-between items-center pl-10 lg:pl-40 pr-32 text-x min-h-24 fixed z-20'
         >
             <Link href="/" className="h-[8vh] items-center flex">
                 <div className="h-full w-[16vh] relative">

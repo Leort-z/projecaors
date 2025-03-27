@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from './components/Navbar';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx'
@@ -76,7 +77,7 @@ export default function Home() {
     <div style={{ overflowX: 'hidden' }}>
       <Navbar />
       <div className='h-[100vh]  w-full m-auto group '>
-        <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-center bg-cover  duration-300'>
+        <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-center bg-cover duration-100'>
           <div className="h-full w-full  text-[#F8F1E7] flex flex-col justify-center items-center relative" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
             <div className='h-3/5 w-full flex flex-col  items-center  justify-between absolute bottom-0'>
               <div className='flex flex-col items-center text-center'>
@@ -99,20 +100,37 @@ export default function Home() {
           <BsChevronCompactRight onClick={nextSlide} size={30} /></div>
 
       </div>
-      <section className='h-[calc(100%-96px)] text-center text-4xl lg:px-36 px-16 py-12 flex flex-col items-center' id='portfolio'>
-        <h1  className={roboto700.className}>PORTFÓLIO</h1>
-        <PortfolioSection />
-        <Link className={`h-12 mt-8 lg:w-1/4  w-3/4 text-lg border-2 border-yellow-600 flex items-center hover:shadow-[0_15px_15px_rgba(0,0,0,0.50)] justify-center ${roboto500.className}`}
-          href="/portfolio"> VER MAIS</Link>
+      <section className='h-[calc(100%-96px)] text-center text-4xl' id='portfolio'>
+        <div className='relative h-full w-full'>
+          <Image
+            src='/fundo-projeto.png'
+            alt='Fundo do portfólio'
+            layout='fill'
+            objectFit='cover'
+            className='opacity-10' // Ajuste de opacidade
+          />
+          <div className='relative z-10  flex flex-col items-center lg:px-36 px-16 py-12'>
+            <h1 className={roboto700.className}>PORTFÓLIO</h1>
+            <PortfolioSection />
+            <Link
+              className={`h-12 mt-8 lg:w-1/4 w-3/4 text-lg border-2 border-yellow-600 flex items-center hover:shadow-[0_15px_15px_rgba(0,0,0,0.50)] justify-center ${roboto500.className}`}
+              href='/portfolio'
+              style={{ background: '#F8F1E7' }}>
+              VER MAIS
+            </Link>
+          </div>
+        </div>
       </section>
 
-      <section style={{ background: '#1B3124' }}
+
+      <section style={{ background: 'linear-gradient(to right, #1B3124, #061f16)' }}
         className='h-[calc(100%-96px)] text-center text-4xl px-12 lg:px-36 py-12 flex flex-col items-center' id='servicos'>
-        <h1 className={`text-[#F8F1E7] ${roboto700.className}`} >SERVIÇOS</h1>
+        <h1 className={`text-[#F8F1E7] ${roboto700.className}`}>SERVIÇOS</h1>
         <ServicosSection />
         <Link className={`h-12 w-3/4 lg:w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-10 lg:mt-12 hover:shadow-[0_15px_15px_rgba(0,0,0,0.50)] flex items-center justify-center ${roboto500.className}`}
           href="/servicos"> VER MAIS</Link>
       </section>
+
       <section className='h-[calc(200%-96px)] px-12 py-12 flex flex-col gap-8 items-center text-center' id='quemsomos'>
         <h1 className={`text-4xl mb-4 ${roboto700.className}`}>FAMÍLIA PROJEÇÃO</h1>
         <div className={`flex lg:flex-row flex-col h-2/5 justify-between gap-3 w-5/6 items-center ${roboto400.className}`}>

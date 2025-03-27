@@ -25,9 +25,17 @@ export default function Portifolio() {
           <h1 className={`text-8xl select-none ${roboto700.className}`}>Serviços</h1>
         </div>
       </main>
-      <section className=' text-center text-4xl px-12 lg:px-36 py-12 ' id='portfolio'>
-        <div className='flex flex-wrap h-3/4 justify-between lg:mt-12 gap-3'>
-          {servicosData.map(({ name, mainPhoto, id }) => <ServicoItem name={name} imagePath={mainPhoto} id={id} key={id}/>)}
+      <section className='relative text-center text-4xl px-12 lg:px-36 py-12 ' id='portfolio'>
+        <div
+          className='absolute top-0 left-0 w-full h-full opacity-15 -z-10'
+          style={{
+            backgroundImage: "url('/fundo-projeto.png')",
+            backgroundRepeat: "fill",
+            backgroundSize: "contain"
+          }}
+        />
+        <div className='flex flex-wrap h-3/4 justify-center lg:mt-12 gap-12'>
+          {servicosData.map(({ name, mainPhoto, id }) => <ServicoItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
 
         </div>
       </section>

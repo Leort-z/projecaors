@@ -21,7 +21,7 @@ export default function PortfolioSection() {
 
     return (
         <>
-            <div className="lg:hidden w-full h-full flex justify-center items-center">
+            <div className="lg:hidden w-full h-full flex justify-center items-center z-11">
                 <div className='text-white bg-black opacity-70 p-2 rounded absolute left-[5%]'>
                     <IoIosArrowBack onClick={prevSlide} size={40} /></div>
                 <div className='flex flex-row w-full justify-between mt-12 duration-300'>
@@ -32,7 +32,7 @@ export default function PortfolioSection() {
                     <IoIosArrowForward onClick={nextSlide} size={40} /></div>
             </div>
 
-            <div className="hidden lg:block w-full h-full">
+            <div className="hidden lg:block w-full h-full z-11">
                 <div className='flex flex-row w-full justify-between mt-12'>
                     {portfolioData.slice(0, 5).map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
 
