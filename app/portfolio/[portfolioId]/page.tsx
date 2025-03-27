@@ -5,7 +5,6 @@ import { useParams } from 'next/navigation';
 import WhatsAppButton from '@/app/components/WhatsAppButton';
 import Footer from '@/app/components/Footer';
 import { Merriweather, Roboto } from 'next/font/google';
-import a from '../../../public/fundo-projeto.png'
 
 const merriweather = Merriweather({
     weight: '400',
