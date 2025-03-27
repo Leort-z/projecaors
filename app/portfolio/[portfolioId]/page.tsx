@@ -13,17 +13,18 @@ const merriweather = Merriweather({
 })
 
 const roboto400 = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-roboto'
+    weight: '400',
+    subsets: ['latin'],
+    variable: '--font-roboto'
 })
 
 export default function DetalhesPortfolio() {
     const params = useParams();
     const registro = portfolioData.find(item => item.id === params.portfolioId);
-    const extraPhotos = registro?.extraPhotos;
 
-    const allActions = {
+    type ActionKeys = "PROJECT" | "EXECUTION" | "CONSTRUCTION";
+
+    const allActions: Record<ActionKeys, string> = {
         "PROJECT": "Projeto ✅",
         "EXECUTION": "Execução ✅",
         "CONSTRUCTION": "Construção ✅",
@@ -54,8 +55,8 @@ export default function DetalhesPortfolio() {
                             {registro?.detail ? <p>{registro?.detail}</p> : ""}
                             <p >Ano: {registro?.year}</p>
                             <p>{registro?.city}</p>
-                            {registro?.actions.map((action: string) => (
-                                <p key={action}>{allActions[action]}</p>
+                            {registro?.actions.map((action: string, index) => (
+                                <p key={index}>{allActions[action as keyof typeof allActions]}</p>
                             ))}
                             {registro?.company ? <p>Construção: {registro?.company} </p> : ""}
                             {registro?.videos.map((video, index) => (

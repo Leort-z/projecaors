@@ -1,9 +1,5 @@
 import { FaWhatsapp } from "react-icons/fa";
 
-interface WhatsAppButtonProps {
-    source: string;
-}
-
 export default function WhatsAppButton() {
 
     const phoneNumber = '5551984944045'; // Exemplo: 5511987654321 (código do país + DDD + número)

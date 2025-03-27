@@ -1,7 +1,5 @@
 "use client";
 import Navbar from '@/app/components/Navbar';
-import Image from 'next/image';
-import Link from 'next/link';
 import servicosData from '../../../public/json-data/servicos-data.json';
 import { useParams } from 'next/navigation';
 import WhatsAppButton from '@/app/components/WhatsAppButton';

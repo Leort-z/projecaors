@@ -25,8 +25,8 @@ export default function Portifolio() {
           <h1 className={`text-8xl select-none ${roboto700.className}`}>Portfólio</h1>
         </div>
       </main>
-      <section className='text-center text-4xl px-16 lg:px-36 py-12 ' id='portfolio'>
-        <div className='flex flex-wrap h-full justify-between mt-12 gap-3'>
+      <section className='text-center text-4xl px-16 lg:px-36 lg:py-12 py-4' id='portfolio'>
+        <div className='flex flex-wrap h-full justify-center lg:gap-12'>
           {portfolioData.map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
 
         </div>
