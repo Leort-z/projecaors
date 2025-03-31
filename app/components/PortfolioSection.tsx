@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function PortfolioSection() {
 
-    const [currentIndex, setCurrentIndex] = useState(1);
+    const [currentIndex, setCurrentIndex] = useState(19);
     
     const prevSlide = () => {
         const isFirstSlide = currentIndex === 0;
@@ -14,7 +14,7 @@ export default function PortfolioSection() {
     }
 
     const nextSlide = () => {
-        const isFirstSlide = currentIndex === 4;
+        const isFirstSlide = currentIndex === portfolioData.length - 1;
         const newIndex = isFirstSlide ? 0 : currentIndex + 1
         setCurrentIndex(newIndex);
     }
@@ -34,7 +34,7 @@ export default function PortfolioSection() {
 
             <div className="hidden lg:block w-full h-full z-11">
                 <div className='flex flex-row w-full justify-between mt-12'>
-                    {portfolioData.slice(0, 5).map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
+                    {portfolioData.slice(-5).map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
 
                 </div>
             </div>

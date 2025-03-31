@@ -37,7 +37,7 @@ export default function WhatsAppButton({ source }: FooterProps) {
                 </div>
             ) : (
                 <div className="flex justify-between w-full h-full text-[#F8F1E7]">
-                    <div className='flex flex-col gap-6 items-start justify-center'>
+                    <div className={`flex flex-col gap-6 items-start justify-center ${roboto500.className}`}>
                         <Link href='/#portfolio'>PORTFÓLIO</Link>
                         <Link href='/#servicos'>SERVIÇOS</Link>
                         <Link href='/#quemsomos'>QUEM SOMOS</Link>

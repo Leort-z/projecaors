@@ -113,7 +113,7 @@ export default function Home() {
             <h1 className={roboto700.className}>PORTFÓLIO</h1>
             <PortfolioSection />
             <Link
-              className={`h-12 mt-8 lg:w-1/4 w-3/4 text-lg border-2 border-yellow-600 flex items-center hover:shadow-[0_15px_15px_rgba(0,0,0,0.50)] justify-center ${roboto500.className}`}
+              className={`h-12 mt-8 lg:w-1/4 w-3/4 text-lg border-2 border-yellow-600 flex items-center shadow-xl hover:shadow-[0_15px_15px_rgba(0,0,0,0.50)] justify-center ${roboto500.className}`}
               href='/portfolio'
               style={{ background: '#F8F1E7' }}>
               VER MAIS
@@ -127,7 +127,7 @@ export default function Home() {
         className='h-[calc(100%-96px)] text-center text-4xl px-12 lg:px-36 py-12 flex flex-col items-center' id='servicos'>
         <h1 className={`text-[#F8F1E7] ${roboto700.className}`}>SERVIÇOS</h1>
         <ServicosSection />
-        <Link className={`h-12 w-3/4 lg:w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-10 lg:mt-12 hover:shadow-[0_15px_15px_rgba(0,0,0,0.50)] flex items-center justify-center ${roboto500.className}`}
+        <Link className={`h-12 w-3/4 lg:w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-10 lg:mt-12 shadow-xl hover:shadow-[0_15px_15px_rgba(0,0,0,0.50)] flex items-center justify-center ${roboto500.className}`}
           href="/servicos"> VER MAIS</Link>
       </section>
 
