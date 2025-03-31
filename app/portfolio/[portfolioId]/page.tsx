@@ -18,10 +18,6 @@ const roboto400 = Roboto({
     variable: '--font-roboto'
 })
 
-export const hasValidItems = (array: string[] | undefined): boolean => {
-    return array?.some(photo => photo.trim() !== "") ?? false;
-};
-
 export default function DetalhesPortfolio() {
     const params = useParams();
     const registro = portfolioData.find(item => item.id === params.portfolioId);
@@ -32,6 +28,10 @@ export default function DetalhesPortfolio() {
         "PROJECT": "Projeto ✅",
         "EXECUTION": "Execução ✅",
         "CONSTRUCTION": "Construção ✅",
+    };
+
+    const hasValidItems = (array: string[] | undefined): boolean => {
+        return array?.some(photo => photo.trim() !== "") ?? false;
     };
 
     return (
@@ -66,7 +66,7 @@ export default function DetalhesPortfolio() {
                                 ))}
                                 {registro?.company ? <p>Construção: {registro?.company} </p> : ""}
                                 {registro?.videos.map((video, index) => (
-                                    <div className='lg:h-[80vh] h-[50vh] w-full flex items-center justify-center' key={index}>
+                                    <div className='lg:h-[80vh] h-[50vh] w-full flex items-center justify-center mt-4' key={index}>
                                         <iframe
                                             className='h-full w-full'
                                             src={video}
