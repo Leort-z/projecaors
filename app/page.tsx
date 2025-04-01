@@ -33,12 +33,6 @@ const roboto400 = Roboto({
   variable: '--font-roboto'
 })
 
-const metadata: Metadata = {
-  title: "Projetos de Engenharia em Capão da Canoa | Projeção Engenharia - Construção e Projetos",
-  description: "Projeção Engenharia: Desenvolvemos projetos estruturais e laudos técnicos para Capão da Canoa e região. Soluções personalizadas para obras residenciais e comerciais com garantia de qualidade.",
-}
-
-
 export default function Home() {
 
   const slides = [
