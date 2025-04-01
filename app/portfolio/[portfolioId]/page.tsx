@@ -48,16 +48,16 @@ export default function DetalhesPortfolio() {
                 <div className='flex h-full justify-between  w-full items-center p-8 lg:p-16'>
 
                     <div className='flex flex-col w-full h-full'>
-                        <div className={`text-2xl flex w-full h-full ${hasValidItems(registro?.extraPhotos) ? 'flex-col' : 'lg:flex-row  lg:items-center flex-col'} gap-3 ${roboto400.className}`}>
+                        <div className={`text-3xl flex w-full h-full ${hasValidItems(registro?.extraPhotos) ? 'flex-col' : 'lg:flex-row  justify-center lg:items-center flex-col'} gap-3 ${roboto400.className}`}>
                             <div className='flex flex-wrap h-full justify-center gap-3'>
                                 {hasValidItems(registro?.extraPhotos) ? (
                                     registro?.extraPhotos.map((photo, index) => (
                                         <div className="h-[30vh] w-[45vh] bg-cover bg-center shadow-2xl" key={index} style={{ backgroundImage: `url(../portfolio-images/${photo})` }} />
                                     ))) :
-                                    <div className=" h-[70vh] w-[55vh] bg-cover bg-center shadow-2xl" style={{ backgroundImage: `url(../portfolio-images/${registro?.mainPhoto})` }} />
+                                    <div className=" h-[75vh] w-[55vh] bg-cover bg-center shadow-2xl" style={{ backgroundImage: `url(../portfolio-images/${registro?.mainPhoto})` }} />
                                 }
                             </div>
-                            <div className='w-full h-full'>
+                            <div className={`h-full text-center ${hasValidItems(registro?.extraPhotos) ? 'w-full mt-10' : 'lg:w-1/2'}`}>
                                 {registro?.detail ? <p>{registro?.detail}</p> : ""}
                                 <p >Ano: {registro?.year}</p>
                                 <p>{registro?.city}</p>
@@ -66,7 +66,7 @@ export default function DetalhesPortfolio() {
                                 ))}
                                 {registro?.company ? <p>Construção: {registro?.company} </p> : ""}
                                 {registro?.videos.map((video, index) => (
-                                    <div className='lg:h-[80vh] h-[50vh] w-full flex items-center justify-center mt-4' key={index}>
+                                    <div className='lg:h-[80vh] h-[50vh] w-full flex items-center justify-center mt-12' key={index}>
                                         <iframe
                                             className='h-full w-full'
                                             src={video}

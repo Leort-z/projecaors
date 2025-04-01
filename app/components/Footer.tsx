@@ -3,14 +3,29 @@ import Link from "next/link";
 import { FaWhatsapp, FaInstagram, FaFacebookSquare } from "react-icons/fa";
 
 const roboto500 = Roboto({
-  weight: '500',
-  subsets: ['latin'],
-  variable: '--font-roboto'
+    weight: '500',
+    subsets: ['latin'],
+    variable: '--font-roboto'
 })
 
 interface FooterProps {
     source: string;
 }
+
+const handleWhatsAppClick = () => {
+    const url = `https://wa.me/5189571008`;
+    window.open(url, '_blank');
+};
+
+const handleFacebookClick = () => {
+    const url = `https://www.facebook.com/projecaors`;
+    window.open(url, '_blank');
+};
+
+const handleInstagramClick = () => {
+    const url = `https://www.instagram.com/projecaors`;
+    window.open(url, '_blank');
+};
 
 export default function WhatsAppButton({ source }: FooterProps) {
     return (
@@ -24,14 +39,20 @@ export default function WhatsAppButton({ source }: FooterProps) {
                         <Link href='/#contato'>CONTATO</Link>
                     </div>
                     <div className='flex flex-col gap-4 justify-center'>
-                        <button>
+                        <button
+                            onClick={handleWhatsAppClick}
+                            aria-label="WhatsApp">
                             <FaWhatsapp className="text-6xl" />
                         </button>
-                        <button>
-                            <FaFacebookSquare className="text-6xl"/>
+                        <button
+                            onClick={handleFacebookClick}
+                            aria-label="Facebook">
+                            <FaFacebookSquare className="text-6xl" />
                         </button>
-                        <button>
-                            <FaInstagram className="text-6xl"/>
+                        <button
+                            onClick={handleInstagramClick}
+                            aria-label="Instagram">
+                            <FaInstagram className="text-6xl" />
                         </button>
                     </div>
                 </div>
@@ -44,14 +65,20 @@ export default function WhatsAppButton({ source }: FooterProps) {
                         <Link href='/#contato'>CONTATO</Link>
                     </div>
                     <div className='flex flex-col gap-4 justify-center'>
-                        <button>
+                        <button
+                            onClick={handleWhatsAppClick}
+                            aria-label="WhatsApp">
                             <FaWhatsapp className="text-6xl" />
                         </button>
-                        <button>
-                            <FaFacebookSquare className="text-6xl"/>
+                        <button
+                            onClick={handleFacebookClick}
+                            aria-label="Facebook">
+                            <FaFacebookSquare className="text-6xl" />
                         </button>
-                        <button>
-                            <FaInstagram className="text-6xl"/>
+                        <button
+                            onClick={handleInstagramClick}
+                            aria-label="Instagram">
+                            <FaInstagram className="text-6xl" />
                         </button>
                     </div>
                 </div>

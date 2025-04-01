@@ -193,7 +193,7 @@ export default function Home() {
       <section style={{ background: '#1B3124' }}
         className={`h-[calc(140%-96px)] text-center text-4xl px-36 py-16 flex flex-col items-center gap-16 ${roboto500.className}`} id='contato'>
         <div className='flex lg:w-full h-2/4 items-center justify-center lg:flex-row flex-col'>
-          <div className='flex flex-col  h-3/4 w-[40vh] lg:w-2/5 items-start gap-4 mb-6 '>
+          <div className='flex flex-col  h-3/4 w-[40vh] lg:w-2/5 items-start gap-2 '>
             <h1 className="font-bold text-[#F8F1E7] text-6xl">Contato:</h1>
             <div className='flex items-center text-2xl gap-4'>
               <IoLocationOutline className='text-[#F8F1E7] text-5xl' />
@@ -225,7 +225,7 @@ export default function Home() {
 
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d865.9319525534949!2d-50.017724510561!3d-29.756589710652964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95228320911045f1%3A0x3bba1caa90c3b287!2sProje%C3%A7%C3%A3o%20Arquitetura%20e%20Engenharia!5e0!3m2!1spt-BR!2sbr!4v1737053648924!5m2!1spt-BR!2sbr"
-          className="w-[40vh] h-[50vh] lg:w-[140vh] lg:h-[60vh] shadow-xl" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+          className="w-[40vh] h-[50vh] lg:w-[140vh] lg:h-[60vh] shadow-xl mb-2" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
 
       </section>
       <section
