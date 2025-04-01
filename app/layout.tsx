@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const metadata: Metadata = {
   title: "Projeção Engenharia - Construção e Projetos | Projetos de Engenharia em Capão da Canoa",
   description: "Projeção Engenharia: Desenvolvemos projetos estruturais e laudos técnicos para Capão da Canoa e região. Soluções personalizadas para obras residenciais e comerciais com garantia de qualidade.",
