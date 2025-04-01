@@ -13,6 +13,7 @@ import { PiEnvelopeSimpleLight } from "react-icons/pi";
 import PortfolioSection from './components/PortfolioSection';
 import ServicosSection from './components/ServicosSection';
 import Footer from './components/Footer';
+import Head from 'next/head';
 
 
 const roboto700 = Roboto({
@@ -75,6 +76,16 @@ export default function Home() {
 
   return (
     <div style={{ overflowX: 'hidden' }}>
+
+      <Head>
+        <title>Projetos de Engenharia em Capão da Canoa | Projeção Engenharia - Construção e Projetos</title>
+        <meta
+          name="description"
+          content="Projeção Engenharia: Desenvolvemos projetos estruturais e laudos técnicos para Capão da Canoa e região. Soluções personalizadas para obras residenciais e comerciais com garantia de qualidade."
+        />
+        <meta name="keywords" content="engenharia capão da canoa, construtoras em capão da canoa, laudos técnicos, construtora capão da canoa, regularização de obras" />
+      </Head>
+
       <Navbar />
       <div className='h-[100vh]  w-full m-auto group '>
         <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-center bg-cover duration-100'>
