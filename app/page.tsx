@@ -13,7 +13,6 @@ import { PiEnvelopeSimpleLight } from "react-icons/pi";
 import PortfolioSection from './components/PortfolioSection';
 import ServicosSection from './components/ServicosSection';
 import Footer from './components/Footer';
-import Head from 'next/head';
 import { Metadata } from 'next';
 
 
