@@ -15,7 +15,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Projeção Engenharia",
-    "description": "Construção, Projetos, Laudo Técnico, Obras e Plotagem",
+    "description": "Construção, Projetos, Laudo Técnico, Obras e Engenharia Civil",
     "image": "https://www.projecao.com.br/logo.png",
     "address": {
       "@type": "PostalAddress",
