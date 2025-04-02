@@ -13,8 +13,8 @@ export default function DesktopNavbar() {
                     <Image
                         src="/white-logo.png"
                         alt="Logo"
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        style={{objectFit: "cover"}}
                     />
                 </div>
             </Link>

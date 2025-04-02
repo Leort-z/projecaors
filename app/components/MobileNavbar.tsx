@@ -18,8 +18,8 @@ export default function MobileNavbar() {
                         <Image
                             src="/white-logo.png"
                             alt="Projecao Logo"
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            style={{objectFit: "cover"}}
                         />
                     </div>
                 </Link>

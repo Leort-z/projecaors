@@ -74,16 +74,6 @@ export default function Home() {
   return (
     <div style={{ overflowX: 'hidden' }}>
 
-    {/*
-      <Head>
-        <title>Projetos de Engenharia em Capão da Canoa | Projeção Engenharia - Construção e Projetos</title>
-        <meta
-          name="description"
-          content="Projeção Engenharia: Desenvolvemos projetos estruturais e laudos técnicos para Capão da Canoa e região. Soluções personalizadas para obras residenciais e comerciais com garantia de qualidade."
-        />
-        <meta name="keywords" content="engenharia capão da canoa, construtoras em capão da canoa, laudos técnicos, construtora capão da canoa, regularização de obras" />
-      </Head>*/}
-
       <Navbar />
       <div className='h-[100vh]  w-full m-auto group '>
         <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-center bg-cover duration-100'>
@@ -103,9 +93,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='lg:hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <div className='lg:hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'
+        aria-label="Slide anterior">
           <BsChevronCompactLeft onClick={prevSlide} size={30} /></div>
-        <div className='lg:hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <div className='lg:hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'
+        aria-label="Próximo Slide">
           <BsChevronCompactRight onClick={nextSlide} size={30} /></div>
 
       </div>
@@ -114,8 +106,8 @@ export default function Home() {
           <Image
             src='/fundo-projeto.png'
             alt='Fundo do portfólio'
-            layout='fill'
-            objectFit='cover'
+            fill
+            style={{objectFit: "cover"}}
             className='opacity-10' // Ajuste de opacidade
           />
           <div className='relative z-10  flex flex-col items-center lg:px-36 px-16 py-12'>
@@ -124,6 +116,7 @@ export default function Home() {
             <Link
               className={`h-12 mt-8 lg:w-1/4 w-3/4 text-lg border-2 border-yellow-600 flex items-center shadow-xl hover:shadow-[0_15px_15px_rgba(0,0,0,0.50)] justify-center ${roboto500.className}`}
               href='/portfolio'
+              aria-label="Ver mais projetos do portfólio"
               style={{ background: '#F8F1E7' }}>
               VER MAIS
             </Link>
@@ -137,7 +130,8 @@ export default function Home() {
         <h1 className={`text-[#F8F1E7] ${roboto700.className}`}>SERVIÇOS</h1>
         <ServicosSection />
         <Link className={`h-12 w-3/4 lg:w-1/4 text-lg border-2 border-yellow-600 text-[#A77A37] mt-10 lg:mt-12 shadow-xl hover:shadow-[0_15px_15px_rgba(0,0,0,0.50)] flex items-center justify-center ${roboto500.className}`}
-          href="/servicos"> VER MAIS</Link>
+          href="/servicos"
+          aria-label="Ver mais serviços da Empresa"> VER MAIS</Link>
       </section>
 
       <section className='h-[calc(200%-96px)] px-12 py-12 flex flex-col gap-8 items-center text-center' id='quemsomos'>
@@ -223,9 +217,9 @@ export default function Home() {
           </div>
           <div className='w-[40vh] lg:w-2/5 h-3/4 '>
             <form action="https://formsubmit.co/alisson-sds@hotmail.com" method="POST" className='w-full h-full flex flex-col items-start gap-3 lg:mt-10'>
-              <input type="text" name="name" required className="border-2 border-yellow-600 w-full text-2xl outline-none placeholder:text-lg" placeholder='Digite seu nome*'></input>
-              <input type="email" name="email" required className="border-2 border-yellow-600 w-full text-2xl outline-none placeholder:text-lg" placeholder='Digite seu E-mail*'></input>
-              <textarea name="message" required className="border-2 border-yellow-600 w-full h-full text-2xl outline-none placeholder:text-lg" placeholder='Digite sua mensagem*'></textarea>
+              <input id="name" type="text" name="name" required className="border-2 border-yellow-600 w-full text-2xl outline-none placeholder:text-lg" placeholder='Digite seu nome*'></input>
+              <input id="email" type="email" name="email" required className="border-2 border-yellow-600 w-full text-2xl outline-none placeholder:text-lg" placeholder='Digite seu E-mail*'></input>
+              <textarea id="text" name="message" required className="border-2 border-yellow-600 w-full h-full text-2xl outline-none placeholder:text-lg" placeholder='Digite sua mensagem*'></textarea>
               <button type="submit" className={`w-full text-lg border-2 border-yellow-600 text-[#A77A37] hover:shadow-[0_15px_15px_rgba(0,0,0,0.50)] ${roboto500.className}`}>ENVIAR MENSAGEM</button>
               <input type="hidden" name="_subject" value="Novo Contato!"></input>
               <input type="hidden" name="_captcha" value="false"></input>
@@ -234,7 +228,8 @@ export default function Home() {
 
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d865.9319525534949!2d-50.017724510561!3d-29.756589710652964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95228320911045f1%3A0x3bba1caa90c3b287!2sProje%C3%A7%C3%A3o%20Arquitetura%20e%20Engenharia!5e0!3m2!1spt-BR!2sbr!4v1737053648924!5m2!1spt-BR!2sbr"
-          className="w-[40vh] h-[50vh] lg:w-[140vh] lg:h-[60vh] shadow-xl mb-2" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+          className="w-[40vh] h-[50vh] lg:w-[140vh] lg:h-[60vh] shadow-xl mb-2" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+          title="Localização da Projeção Engenharia no Google Maps" />
 
       </section>
       <section
