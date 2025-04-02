@@ -13,8 +13,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "EngineeringFirm",
+    "@type": "ProfessionalService",
     "name": "Projeção Engenharia",
+    "description": "Construção, Projetos, Laudo Técnico, Obras e Plotagem",
     "image": "https://www.projecao.com.br/logo.png",
     "address": {
       "@type": "PostalAddress",
