@@ -136,7 +136,7 @@ export default function Home() {
 
       <section className='h-[calc(200%-96px)] px-12 py-12 flex flex-col gap-8 items-center text-center' id='quemsomos'>
         <h1 className={`text-4xl mb-4 ${roboto700.className}`}>FAMÍLIA PROJEÇÃO</h1>
-        <div className={`flex lg:flex-row flex-col h-2/5 justify-between gap-3 w-5/6 items-center ${roboto400.className}`}>
+        <div className={`flex lg:flex-row flex-col-reverse h-2/5 justify-between gap-3 w-5/6 items-center ${roboto400.className}`}>
           <div className="lg:h-[50vh] h-[30vh] lg:w-2/5 flex flex-col">
             <div className="h-full w-full bg-cover bg-center rounded-2xl shadow-xl" style={{ backgroundImage: "url('/historia-images/escritorio.png" }} />
             <h3 className="text-xs lg:text-lg text-center">(Elizabeth, Mário Sérgio e Marlene Barrionuevo em frente ao Chalé Verde)</h3>
@@ -155,7 +155,7 @@ export default function Home() {
             foi o lar da família Barrionuevo.</p>
         </div>
 
-        <div className={`flex flex-col-reverse h-2/5 justify-between gap-3 w-5/6 items-center lg:flex-row  ${roboto400.className}`}>
+        <div className={`flex flex-col h-2/5 justify-between gap-3 w-5/6 items-center lg:flex-row  ${roboto400.className}`}>
           <p className='text-xs lg:text-xl lg:w-2/4'>
             Mário Sérgio não foi apenas um engenheiro talentoso, mas também
             um professor dedicado e uma figura respeitada em Capão da Canoa.
@@ -172,7 +172,7 @@ export default function Home() {
             <h3 className="text-xs lg:text-lg text-center">(Legenda: Mário Sérgio fundador da empresa Projeção)</h3>
           </div>
         </div>
-        <div className={`flex h-2/5 justify-between w-5/6 items-center flex-col lg:flex-row gap-3  ${roboto400.className}`}>
+        <div className={`flex h-2/5 justify-between w-5/6 items-center flex-col-reverse lg:flex-row gap-3  ${roboto400.className}`}>
           <div className="lg:h-[50vh] h-[30vh] lg:w-2/5  flex flex-col">
             <div className="h-full w-full bg-cover bg-center rounded-2xl shadow-xl" style={{ backgroundImage: "url('/historia-images/formatura.png" }} />
             <h3 className="text-xs lg:text-lg text-center">(Legenda: Ramiro e Isadora, Formatura de Engenharia Civil 2022/1 PUCRS)</h3>
