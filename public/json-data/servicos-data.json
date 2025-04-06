@@ -1,6 +1,18 @@
 [
    {
       "id":"1",
+      "name":"Construção",
+      "detail":"Realizamos a construção do início ao fim, desde fundações até acabamentos, sempre com foco em eficiência, segurança e qualidade.",
+      "extraDetail":[
+         
+      ],
+      "mainPhoto":"construcao.png",
+      "extraPhotos":[
+         ""
+      ]
+   },
+   {
+      "id":"2",
       "name":"Projetos",
       "detail":"Desenvolvimento e execução de projetos personalizados, incluindo:",
       "extraDetail":[
@@ -14,25 +26,13 @@
       ]
    },
    {
-      "id":"2",
-      "name":"Execução de Obras",
-      "detail":"Realização completa da construção de casas, prédios e empreendimentos, com atenção a cada detalhe e garantia de qualidade em todas as fases.",
-      "extraDetail":[
-         
-      ],
-      "mainPhoto":"execucao-obra.png",
-      "extraPhotos":[
-         ""
-      ]
-   },
-   {
       "id":"3",
-      "name":"Acompanhamento de Obras",
-      "detail":"Supervisão técnica contínua, assegurando que todos os detalhes do projeto sejam executados conforme os padrões de excelência.",
+      "name":"Plotagem de Projetos",
+      "detail":"Impressão de alta qualidade colorida ou P&B, com atendimento ágil para sua necessidade.",
       "extraDetail":[
-         
+         "OBS: Disponibilizamos mapas de Capão da Canoa."
       ],
-      "mainPhoto":"acompanhamento-obra.png",
+      "mainPhoto":"plotagem-projetos.png",
       "extraPhotos":[
          ""
       ]
@@ -51,6 +51,18 @@
    },
    {
       "id":"5",
+      "name":"Execução de Obras",
+      "detail":"Realização completa da construção de casas, prédios e empreendimentos, com atenção a cada detalhe e garantia de qualidade em todas as fases.",
+      "extraDetail":[
+         
+      ],
+      "mainPhoto":"execucao-obra.png",
+      "extraPhotos":[
+         ""
+      ]
+   },
+   {
+      "id":"6",
       "name":"Laudos Técnicos",
       "detail":"Emissão de laudos e pareceres técnicos para avaliação de imóveis, análise de estruturas e resolução de problemas construtivos.",
       "extraDetail":[
@@ -60,29 +72,6 @@
       "extraPhotos":[
          ""
       ]
-   },
-   {
-      "id":"6",
-      "name":"Plotagem de Projetos",
-      "detail":"Impressão e plotagem de projetos com qualidade e precisão, atendendo às exigências técnicas e normativas.",
-      "extraDetail":[
-         
-      ],
-      "mainPhoto":"plotagem-projetos.png",
-      "extraPhotos":[
-         ""
-      ]
-   },
-   {
-      "id":"7",
-      "name":"Construção",
-      "detail":"Realizamos a construção do início ao fim, desde fundações até acabamentos, sempre com foco em eficiência, segurança e qualidade.",
-      "extraDetail":[
-         
-      ],
-      "mainPhoto":"construcao.png",
-      "extraPhotos":[
-         ""
-      ]
    }
+   
 ]

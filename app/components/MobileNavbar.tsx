@@ -2,6 +2,13 @@ import Link from "next/link";
 import Image from 'next/image'
 import { useState } from "react";
 import { RiMenuFill } from "react-icons/ri";
+import { Roboto } from "next/font/google";
+
+const roboto500 = Roboto({
+    weight: '500',
+    subsets: ['latin'],
+    variable: '--font-roboto'
+})
 
 export default function MobileNavbar() {
 
@@ -27,7 +34,7 @@ export default function MobileNavbar() {
                     <RiMenuFill size={35} color="#F8F1E7" />
                 </button>
                 <div className={`${isVisible ? 'block' : 'hidden'} w-full `} >
-                    <ul className="flex flex-col font-light mt-4 rounded-lg">
+                    <ul className={`flex flex-col font-light mt-4 rounded-lg ${roboto500.className}`}>
                         <li>
                             <Link href="/" className="block py-2 px-3 text-white text-4xl rounded-sm" style={{ background: '#182f21' }} onClick={() => setIsVisible(!isVisible)}>
                                 Início

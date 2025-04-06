@@ -35,7 +35,16 @@ export default function Portifolio() {
           }}
         />
         <div className='relative flex flex-wrap h-full justify-center lg:gap-12'>
-          {portfolioData.map(({ name, mainPhoto, id }) => <PortfolioItem name={name} imagePath={mainPhoto} id={id} key={id} />)}
+          {Object.entries(portfolioData)
+            .reverse()
+            .map(([key, { name, mainPhoto, id }]) => (
+              <PortfolioItem
+                name={name}
+                imagePath={mainPhoto}
+                id={id}
+                key={id}
+              />
+            ))}
         </div>
       </section>
 
