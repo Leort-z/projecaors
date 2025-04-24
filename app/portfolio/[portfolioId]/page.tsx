@@ -31,7 +31,7 @@ export default function DetalhesPortfolio() {
     };
 
     const hasValidItems = (array: string[] | undefined): boolean => {
-        return array?.some(photo => photo.trim() !== "") ?? false;
+        return (array?.filter(photo => photo.trim() !== "").length ?? 0) >= 2;
     };
 
     return (
@@ -57,7 +57,7 @@ export default function DetalhesPortfolio() {
                                     <div className=" h-[75vh] w-[55vh] bg-cover bg-center shadow-2xl" style={{ backgroundImage: `url(../portfolio-images/${registro?.mainPhoto})` }} />
                                 }
                             </div>
-                            <div className={`h-full text-center ${hasValidItems(registro?.extraPhotos) ? 'w-full mt-10' : 'lg:w-1/2'}`}>
+                            <div className={` h-full text-center ${hasValidItems(registro?.extraPhotos) ? 'w-full mt-10' : 'lg:w-1/2'}`}>
                                 {registro?.detail ? <p>{registro?.detail}</p> : ""}
                                 <p >Ano: {registro?.year}</p>
                                 <p>{registro?.city}</p>
@@ -65,17 +65,19 @@ export default function DetalhesPortfolio() {
                                     <p key={index}>{allActions[action as keyof typeof allActions]}</p>
                                 ))}
                                 {registro?.company ? <p>Construção: {registro?.company} </p> : ""}
-                                {registro?.videos.map((video, index) => (
-                                    <div className='lg:h-[80vh] h-[50vh] w-full flex items-center justify-center mt-12' key={index}>
-                                        <iframe
-                                            className='h-full w-full'
-                                            src={video}
-                                            allowFullScreen
-                                        ></iframe>
-                                    </div>
-                                ))
-                                }
                             </div>
+                        </div>
+                        <div>
+                            {registro?.videos.map((video, index) => (
+                                <div className='lg:h-[80vh] h-[50vh] w-full flex items-center justify-center mt-12' key={index}>
+                                    <iframe
+                                        className='h-full w-full'
+                                        src={video}
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            ))
+                            }
                         </div>
                     </div>
                 </div>

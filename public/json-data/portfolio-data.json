@@ -201,11 +201,18 @@
          "EXECUTION"
       ],
       "company": "",
-      "mainPhoto": "",
-      "extraPhotos": [""],
-      "videos": [
-         ""
-      ]
+      "mainPhoto": "12/12a.png",
+      "extraPhotos": [
+         "12/12a.png",
+         "12/12b.png",
+         "12/12c.png",
+         "12/12d.png",
+         "12/12e.png",
+         "12/12f.png",
+         "12/12g.png",
+         "12/12h.png"
+      ],
+      "videos": []
    },
    {
       "id": "13",
@@ -244,7 +251,7 @@
       ],
       "company": "Super Construtora",
       "mainPhoto": "14.png",
-      "extraPhotos": [""],
+      "extraPhotos": [],
       "videos": []
    },
    {
@@ -257,7 +264,7 @@
          "EXECUTION"
       ],
       "company": "",
-      "mainPhoto": "",
+      "mainPhoto": "15.png",
       "extraPhotos": [],
       "videos": []
    },
@@ -305,10 +312,7 @@
       "extraPhotos": [
          "18/18a.png"         
       ],
-      "videos": [
-         "",
-         ""
-      ]
+      "videos": []
    },
    {
       "id": "19",
@@ -401,5 +405,42 @@
       "mainPhoto": "23.png",
       "extraPhotos": [],
       "videos": []
+   },
+   {
+      "id": "24",
+      "name": "Casa Encanto",
+      "detail": "O equilíbrio perfeito entre sofisticação e modernidade. Com fachada em concreto aparente, detalhes ripados, pedra basalto e iluminação em LED.",
+      "year": "2024",
+      "city": "Capão da Canoa/RS",
+      "actions": [
+         "PROJECT",
+         "EXECUTION",
+         "CONSTRUCTION"
+      ],
+      "company": "",
+      "mainPhoto": "24.png",
+      "extraPhotos": [],
+      "videos": [
+         "https://www.youtube.com/embed/KVcEtcgRgR4"
+      ]
+   },
+   {
+      "id": "25",
+      "name": "Pedra e Luz",
+      "detail": "Apresentamos uma loja comercial que une modernidade e elegância em cada detalhe. Com uma fachada impressionante em pedras de basalto, iluminação em LED e concreto aparente.",
+      "year": "2024",
+      "city": "Xangri-Lá/RS ",
+      "actions": [
+         "PROJECT",
+         "EXECUTION"
+      ],
+      "company": "",
+      "mainPhoto": "25.png",
+      "extraPhotos": [
+         "25/25a.png"
+      ],
+      "videos": [
+         "https://www.youtube.com/embed/64oj9vNjzBs"
+      ]
    }
 ]
