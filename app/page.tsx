@@ -212,11 +212,11 @@ export default function Home() {
             </div>
             <div className='flex items-center text-2xl gap-4'>
               <PiEnvelopeSimpleLight className='text-[#F8F1E7] text-5xl' />
-              <h3 className='text-[#F8F1E7]'>contato@projecao.com.br</h3>
+              <h3 className='text-[#F8F1E7]'>contato@projecaors.com</h3>
             </div>
           </div>
           <div className='w-[40vh] lg:w-2/5 h-3/4 '>
-            <form action="https://formsubmit.co/alisson-sds@hotmail.com" method="POST" className='w-full h-full flex flex-col items-start gap-3 lg:mt-10'>
+            <form action="https://formsubmit.co/contato@projecaors.com" method="POST" className='w-full h-full flex flex-col items-start gap-3 lg:mt-10'>
               <input id="name" type="text" name="name" required className="border-2 border-yellow-600 w-full text-2xl outline-none placeholder:text-lg" placeholder='Digite seu nome*'></input>
               <input id="email" type="email" name="email" required className="border-2 border-yellow-600 w-full text-2xl outline-none placeholder:text-lg" placeholder='Digite seu E-mail*'></input>
               <textarea id="text" name="message" required className="border-2 border-yellow-600 w-full h-full text-2xl outline-none placeholder:text-lg" placeholder='Digite sua mensagem*'></textarea>
