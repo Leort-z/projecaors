@@ -198,9 +198,9 @@ export default function Home() {
         <div className='flex lg:w-full h-2/4 items-center justify-center lg:flex-row flex-col'>
           <div className='flex flex-col  h-3/4 w-[40vh] lg:w-2/5 items-start gap-2 '>
             <h1 className="font-bold text-[#F8F1E7] text-6xl">Contato:</h1>
-            <div className='flex items-center text-2xl gap-4'>
+            <div className='flex items-center text-2xl gap-4 text-start'>
               <IoLocationOutline className='text-[#F8F1E7] text-5xl' />
-              <h3 className='text-[#F8F1E7]'>Rua peri, 1400 - Capão da Canoa/RS</h3>
+              <h3 className='text-[#F8F1E7]'>Rua Peri, 1777, Sala 302, Centro, Capão da Canoa/RS</h3>
             </div>
             <div className='flex items-center text-2xl gap-4'>
               <MdLocalPhone className='text-[#F8F1E7] text-5xl' />
