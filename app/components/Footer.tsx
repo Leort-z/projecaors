@@ -13,7 +13,7 @@ interface FooterProps {
 }
 
 const handleWhatsAppClick = () => {
-    const url = `https://wa.me/5189571008`;
+    const url = `https://wa.me/5551995185674`;
     window.open(url, '_blank');
 };
 

@@ -204,11 +204,11 @@ export default function Home() {
             </div>
             <div className='flex items-center text-2xl gap-4'>
               <MdLocalPhone className='text-[#F8F1E7] text-5xl' />
-              <h3 className='text-[#F8F1E7]'>51 99090-9090</h3>
+              <h3 className='text-[#F8F1E7]'>51 99518-5674</h3>
             </div>
             <div className='flex items-center text-2xl gap-4'>
               <FaWhatsapp className='text-[#F8F1E7] text-5xl' />
-              <h3 className='text-[#F8F1E7]'>51 99090-9090</h3>
+              <h3 className='text-[#F8F1E7]'>51 99518-5674</h3>
             </div>
             <div className='flex items-center text-2xl gap-4'>
               <PiEnvelopeSimpleLight className='text-[#F8F1E7] text-5xl' />
