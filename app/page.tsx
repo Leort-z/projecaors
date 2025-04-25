@@ -37,15 +37,16 @@ export default function Home() {
 
   const slides = [
     {
-      url: 'servicos-images/construcao.png',
-      title: 'CONSTRUÇÃO',
-      subtitle: "Tornamos o seu sonho de construir no litoral em realidade"
-    },
-    {
       url: 'servicos-images/projetos.png',
       title: 'PROJETOS',
       subtitle: "Transformamos suas ideias em realidade"
+    },
+    {
+      url: 'servicos-images/construcao.png',
+      title: 'CONSTRUÇÃO',
+      subtitle: "Tornamos o seu sonho de construir no litoral em realidade"
     }
+    
   ]
 
   const [currentIndex, setCurrentIndex] = useState(1);
