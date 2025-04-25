@@ -10,6 +10,7 @@
          "EXECUTION"
       ],
       "company": "Super Construtora",
+      "companyLogo":"super-construtora.png",
       "mainPhoto": "1.png",
       "extraPhotos": [
          ""
@@ -27,6 +28,7 @@
          "EXECUTION"
       ],
       "company": "ICS Construção",
+      "companyLogo":"ics-construtora.png",
       "mainPhoto": "2.png",
       "extraPhotos": [
          ""
@@ -44,6 +46,7 @@
          "EXECUTION"
       ],
       "company": "ICS Construção",
+      "companyLogo":"ics-construtora.png",
       "mainPhoto": "3.png",
       "extraPhotos": [
          ""
@@ -61,6 +64,7 @@
          "EXECUTION"
       ],
       "company": "ICS Construção",
+      "companyLogo":"ics-construtora.png",
       "mainPhoto": "4.png",
       "extraPhotos": [
          ""
@@ -78,6 +82,7 @@
          "EXECUTION"
       ],
       "company": "ICS Construção",
+      "companyLogo":"ics-construtora.png",
       "mainPhoto": "5.png",
       "extraPhotos": [
          ""
@@ -110,6 +115,7 @@
          "EXECUTION"
       ],
       "company": "ICS Construção",
+      "companyLogo":"ics-construtora.png",
       "mainPhoto": "7.png",
       "extraPhotos": [""
       ],
@@ -126,6 +132,7 @@
          "EXECUTION"
       ],
       "company": "Super Construtora",
+      "companyLogo":"super-construtora.png",
       "mainPhoto": "8.png",
       "extraPhotos": [],
       "videos": []
@@ -250,6 +257,7 @@
          "EXECUTION"
       ],
       "company": "Super Construtora",
+      "companyLogo":"super-construtora.png",
       "mainPhoto": "14.png",
       "extraPhotos": [],
       "videos": []
@@ -279,6 +287,7 @@
          "EXECUTION"
       ],
       "company": "ICS Construção",
+      "companyLogo":"ics-construtora.png",
       "mainPhoto": "16.png",
       "extraPhotos": [],
       "videos": []
@@ -293,6 +302,7 @@
          "EXECUTION"
       ],
       "company": "Mare Construtora e Incorporadora",
+      "companyLogo":"mare-construtora.png",
       "mainPhoto": "17.png",
       "extraPhotos": [],
       "videos": []
@@ -308,6 +318,7 @@
          "EXECUTION"
       ],
       "company": "Metta Construtora",
+      "companyLogo":"metta-construtora.png",
       "mainPhoto": "18/18.png",
       "extraPhotos": [
          "18/18a.png"         
@@ -351,6 +362,7 @@
          "EXECUTION"
       ],
       "company": "Metta Construtora",
+      "companyLogo":"metta-construtora.png",
       "mainPhoto": "20/20.png",
       "extraPhotos": [
          "20/20a.png",
@@ -381,28 +393,16 @@
    {
       "id": "22",
       "name": "Liberty Residence",
-      "detail": "",
+      "detail": "Projeto e Execução da nossa empresa para Super Construtora",
       "year": "2024",
       "city": "Gramado/RS",
       "actions": [
+         "PROJECT",
          "EXECUTION"
       ],
       "company": "Super Construtora",
+      "companyLogo":"super-construtora.png",
       "mainPhoto": "22.png",
-      "extraPhotos": [],
-      "videos": []
-   },
-   {
-      "id": "23",
-      "name": "Fragance Gramado",
-      "detail": "",
-      "year": "2024",
-      "city": "Gramado/RS",
-      "actions": [
-         "EXECUTION"
-      ],
-      "company": "Super Construtora",
-      "mainPhoto": "23.png",
       "extraPhotos": [],
       "videos": []
    },
@@ -434,7 +434,8 @@
          "PROJECT",
          "EXECUTION"
       ],
-      "company": "",
+      "company": "Metta Construtora",
+      "companyLogo":"metta-construtora.png",
       "mainPhoto": "25.png",
       "extraPhotos": [
          "25/25a.png"

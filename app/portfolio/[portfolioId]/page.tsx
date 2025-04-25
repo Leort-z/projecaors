@@ -57,14 +57,15 @@ export default function DetalhesPortfolio() {
                                     <div className=" h-[75vh] w-[55vh] bg-cover bg-center shadow-2xl" style={{ backgroundImage: `url(../portfolio-images/${registro?.mainPhoto})` }} />
                                 }
                             </div>
-                            <div className={` h-full text-center ${hasValidItems(registro?.extraPhotos) ? 'w-full mt-10' : 'lg:w-1/2'}`}>
+                            <div className={` h-full flex flex-col items-center text-center ${hasValidItems(registro?.extraPhotos) ? 'w-full mt-10' : 'lg:w-1/2'}`}>
                                 {registro?.detail ? <p>{registro?.detail}</p> : ""}
                                 <p >Ano: {registro?.year}</p>
                                 <p>{registro?.city}</p>
                                 {registro?.actions.map((action: string, index) => (
                                     <p key={index}>{allActions[action as keyof typeof allActions]}</p>
                                 ))}
-                                {registro?.company ? <p>Construção: {registro?.company} </p> : ""}
+                                {registro?.company ? <p className=''>Construção: {registro?.company} </p> : ""}
+                                {registro?.companyLogo ? <div className="h-[35vh] w-[50vh] bg-cover bg-center" style={{ backgroundImage: `url(../company-logos/${registro?.companyLogo})` }} /> : ""}
                             </div>
                         </div>
                         <div>
