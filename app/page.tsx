@@ -42,14 +42,9 @@ export default function Home() {
       subtitle: "Tornamos o seu sonho de construir no litoral em realidade"
     },
     {
-      url: 'servicos-images/execucao-obra.png',
-      title: 'OBRAS',
-      subtitle: "Executamos sua obra com excelência"
-    },
-    {
-      url: 'servicos-images/laudo-tecnico.png',
-      title: 'LAUDO TÉCNICO',
-      subtitle: "Garantimos a segurança da sua obra"
+      url: 'servicos-images/projetos.png',
+      title: 'PROJETOS',
+      subtitle: "Transformamos suas ideias em realidade"
     }
   ]
 
