@@ -249,21 +249,6 @@
    },
    {
       "id": "14",
-      "name": "Essence Gramado",
-      "detail": "",
-      "year": "2021",
-      "city": "Gramado/RS",
-      "actions": [
-         "EXECUTION"
-      ],
-      "company": "Super Construtora",
-      "companyLogo":"super-construtora.png",
-      "mainPhoto": "14.png",
-      "extraPhotos": [],
-      "videos": []
-   },
-   {
-      "id": "15",
       "name": "Posto Maravilha - Torres",
       "detail": "",
       "year": "2021",
@@ -277,7 +262,7 @@
       "videos": []
    },
    {
-      "id": "16",
+      "id": "15",
       "name": "Tischler Residence",
       "detail": "",
       "year": "2022",
@@ -291,24 +276,9 @@
       "mainPhoto": "16.png",
       "extraPhotos": [],
       "videos": []
-   },
+   },   
    {
-      "id": "17",
-      "name": "Palazzo di Milano",
-      "detail": "",
-      "year": "2022",
-      "city": "Porto Alegre/RS",
-      "actions": [
-         "EXECUTION"
-      ],
-      "company": "Mare Construtora e Incorporadora",
-      "companyLogo":"mare-construtora.png",
-      "mainPhoto": "17.png",
-      "extraPhotos": [],
-      "videos": []
-   },
-   {
-      "id": "18",
+      "id": "16",
       "name": "Rio Carreiro 86",
       "detail": "",
       "year": "2022",
@@ -326,7 +296,7 @@
       "videos": []
    },
    {
-      "id": "19",
+      "id": "17",
       "name": "Sunset QD12LT09",
       "detail": "Uma residência com projeto moderno, fachada com porcelanato nobre, leds e pintura em cimento queimado.",
       "year": "2023",
@@ -352,7 +322,7 @@
       ]
    },
    {
-      "id": "20",
+      "id": "18",
       "name": "Ceci 3337",
       "detail": "",
       "year": "2023",
@@ -371,7 +341,7 @@
       "videos": []
    },
    {
-      "id": "21",
+      "id": "19",
       "name": "Reforma Área Gourmet",
       "detail": "",
       "year": "2024",
@@ -391,6 +361,36 @@
       ]
    },
    {
+      "id": "20",
+      "name": "Essence Gramado",
+      "detail": "",
+      "year": "2021",
+      "city": "Gramado/RS",
+      "actions": [
+         "EXECUTION"
+      ],
+      "company": "Super Construtora",
+      "companyLogo":"super-construtora.png",
+      "mainPhoto": "14.png",
+      "extraPhotos": [],
+      "videos": []
+   },
+   {
+      "id": "21",
+      "name": "Palazzo di Milano",
+      "detail": "",
+      "year": "2022",
+      "city": "Porto Alegre/RS",
+      "actions": [
+         "EXECUTION"
+      ],
+      "company": "Mare Construtora e Incorporadora",
+      "companyLogo":"mare-construtora.png",
+      "mainPhoto": "17.png",
+      "extraPhotos": [],
+      "videos": []
+   },
+   {
       "id": "22",
       "name": "Liberty Residence",
       "detail": "Projeto e Execução da nossa empresa para Super Construtora",
@@ -407,7 +407,7 @@
       "videos": []
    },
    {
-      "id": "24",
+      "id": "23",
       "name": "Casa Encanto",
       "detail": "O equilíbrio perfeito entre sofisticação e modernidade. Com fachada em concreto aparente, detalhes ripados, pedra basalto e iluminação em LED.",
       "year": "2024",
@@ -425,7 +425,7 @@
       ]
    },
    {
-      "id": "25",
+      "id": "24",
       "name": "Pedra e Luz",
       "detail": "Apresentamos uma loja comercial que une modernidade e elegância em cada detalhe. Com uma fachada impressionante em pedras de basalto, iluminação em LED e concreto aparente.",
       "year": "2024",
